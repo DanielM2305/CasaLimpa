@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="casalimpa.projeto.com.casalimpa.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <TextView
+
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/casa_limpa"
+            android:textSize="@dimen/tamanhoTitulosPrincipal"
+            android:textColor="@color/corLetrasGeral"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contrate_um_profissional"
+            android:textSize="@dimen/tamanhoTitulosFormulario"
+            android:textColor="@color/corLetrasGeral"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/usuario"
+            android:textColor="@color/corLetrasGeral"
+            android:textSize="@dimen/tamanhoTextoGeral" />
+
+        <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/corLetrasGeral"
+            android:textSize="@dimen/tamanhoTextoGeral" android:inputType="" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/senha"
+            android:textSize="@dimen/tamanhoTextoGeral"
+            android:textColor="@color/corLetrasGeral"/>
+
+        <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textSize="@dimen/tamanhoTextoGeral"
+            android:textColor="@color/corLetrasGeral"/>
+
+
+        <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/entrar"
+            android:textSize="@dimen/tamnhoTextoBotoes"
+            android:textColor="@color/corLetrasGeral"/>
+
+        <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
+        <!-- Botão apenas para teste de navegação entre paginas -->
+        <Button
+            android:id="@+id/proximaPaginaCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proxima Pagina"
+            android:textSize="@dimen/tamnhoTextoBotoes"
+            android:textColor="@color/corLetrasGeral"/>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Casa Limpa</string>
+    <string name="contrate_um_profissional">Contrate um profissional</string>
+    <string name="casa_limpa">Casa Limpa</string>
+    <string name="entrar">Entrar</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="CadastrarPerfilButton">Cadastrar meu Perfil</string>
+</resources>

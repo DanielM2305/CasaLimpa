@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamanhoTitulosPrincipal">30sp</dimen>dimen>
+    <dimen name="tamanhoTitulosFormulario">20sp</dimen>
+    <dimen name="tamanhoTextoGeral">15sp</dimen>
+    <dimen name="tamnhoTextoBotoes">20sp</dimen>
+
+</resources>
