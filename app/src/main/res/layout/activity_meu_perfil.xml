@@ -169,16 +169,24 @@
                     android:textSize="@dimen/tamanhoTextoBotoes"
                     android:textColor="@color/corLetrasGeral"/>
 
+                <Button
+                    android:onClick="telaDashboard"
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Teste Proxima Página"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:textColor="@color/corLetrasGeral"/>
+
+
+
+
             </LinearLayout>
         </ScrollView>
 
-        <Button
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Editar Perfil"
-            android:textSize="@dimen/tamanhoTextoBotoes"
-            android:textColor="@color/corLetrasGeral"/>
+
+
 
 
 

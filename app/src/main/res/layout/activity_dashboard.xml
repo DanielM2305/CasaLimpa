@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="casalimpa.projeto.com.casalimpa.Dashboard">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <TextView
+
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/casa_limpa"
+            android:textSize="@dimen/tamanhoTitulosPrincipal"
+            android:textColor="@color/corLetrasGeral"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textSize="@dimen/tamanhoTitulosFormulario"
+            android:textColor="@color/corLetrasGeral"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notificações"
+            android:textSize="@dimen/tamanhoTitulosFormulario"
+            android:textColor="@color/corLetrasGeral"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/aguardandoServico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Serviço(s) aguardando realização dos prestadores de Serviço."
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoGeral" />
+
+                <TextView
+                    android:id="@+id/realizacaoServico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Serviço(s) aguardando sua realização."
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoGeral" />
+
+                <TextView
+                    android:id="@+id/aguardandoAvaliacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Serviço(s) aguardando sua Avaliação."
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoGeral" />
+
+                <TextView
+                    android:id="@+id/suaAvaliacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Serviço(s) onde você foi Avaliado."
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoGeral" />
+
+
+                <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
+
+                <!-- Botão apenas para teste de navegação entre paginas -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Veja todos os Serviços"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoBotoes" />
+<!--
+                <Button
+                    android:onClick="telaDashboard"
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Teste Proxima Página"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:textColor="@color/corLetrasGeral"/>
+-->
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.LinearLayoutCompat>

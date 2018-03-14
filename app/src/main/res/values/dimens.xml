@@ -4,5 +4,6 @@
     <dimen name="tamanhoTitulosFormulario">20sp</dimen>
     <dimen name="tamanhoTextoGeral">15sp</dimen>
     <dimen name="tamanhoTextoBotoes">20sp</dimen>
+    <dimen name="tamanhoTextoNumeroDashboard">50sp</dimen>
 
 </resources>

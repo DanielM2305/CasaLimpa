@@ -1,7 +1,9 @@
 package casalimpa.projeto.com.casalimpa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MeuPerfilActivity extends AppCompatActivity {
 
@@ -10,4 +12,12 @@ public class MeuPerfilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meu_perfil);
     }
+
+
+    public void telaDashboard(View view){
+        Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+        startActivity(intent);
+
+    }
+
 }
