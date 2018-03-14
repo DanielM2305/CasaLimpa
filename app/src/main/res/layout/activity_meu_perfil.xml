@@ -166,7 +166,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Editar Perfil"
-                    android:textSize="@dimen/tamnhoTextoBotoes"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
                     android:textColor="@color/corLetrasGeral"/>
 
             </LinearLayout>
@@ -177,7 +177,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Editar Perfil"
-            android:textSize="@dimen/tamnhoTextoBotoes"
+            android:textSize="@dimen/tamanhoTextoBotoes"
             android:textColor="@color/corLetrasGeral"/>
 
 

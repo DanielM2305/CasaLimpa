@@ -253,8 +253,24 @@
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="text"/>
 
+                <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
 
+                <!-- Botão apenas para teste de navegação entre paginas -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastrar"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoBotoes" />
 
+                <Button
+                    android:onClick="telaMeuPerfil"
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Teste Proxima Página"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:textColor="@color/corLetrasGeral"/>
 
 
             </LinearLayout>
