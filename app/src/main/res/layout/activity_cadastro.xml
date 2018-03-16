@@ -37,7 +37,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Qual tipo de Perfil"
+                    android:text="Escolha o perfil:"
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTextoGeral" />
 
@@ -62,191 +62,119 @@
                         android:text="Empregador"/>
                 </RadioGroup>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Nome Completo"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoGeral" />
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
+                    android:hint="Nome completo"
                     android:textColor="@color/corLetrasGeral" />
-
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="E-mail"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="textEmailAddress"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Login"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Nome de usuário"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="text"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Senha"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Senha"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="textPassword"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="CPF"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
+                                <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:id="@+id/cpfEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="CPF"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="number"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Telefone"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:id="@+id/telEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Telefone"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="phone"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Data de Nascimento"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:id="@+id/dataEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Data de nascimento"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="date"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="CEP"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:id="@+id/cepEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="CEP"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="number"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Logradouro"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Logradouro"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="text"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Cidade"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Cidade"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="text"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Bairro"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Bairro"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="text"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Estado"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Estado"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="text"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Complemento"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="Complemento"
                     android:textColor="@color/corLetrasGeral"
                     android:inputType="text"/>
 
