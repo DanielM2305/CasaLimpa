@@ -70,7 +70,7 @@
                     android:id="@+id/textLoginId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
@@ -86,7 +86,7 @@
                     android:id="@+id/textEmailId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
@@ -103,7 +103,7 @@
                     android:id="@+id/textCpfId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
@@ -120,7 +120,7 @@
                     android:id="@+id/textLogradouroId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
@@ -129,7 +129,7 @@
                     android:id="@+id/textCidadeId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
@@ -138,7 +138,7 @@
                     android:id="@+id/textBairroId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
@@ -147,7 +147,7 @@
                     android:id="@+id/textEstadoId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
@@ -156,7 +156,7 @@
                     android:id="@+id/textComplementoId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="O texto vira do banco através do que foi cadastrado"
+                    android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 

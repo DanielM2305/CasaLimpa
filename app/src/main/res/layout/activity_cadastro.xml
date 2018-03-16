@@ -136,10 +136,11 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/cpfEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/corLetrasGeral"
-                    android:inputType="numberDecimal"/>
+                    android:inputType="number"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -150,6 +151,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/telEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/corLetrasGeral"
@@ -164,6 +166,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/dataEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/corLetrasGeral"
@@ -178,6 +181,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/cepEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/corLetrasGeral"
