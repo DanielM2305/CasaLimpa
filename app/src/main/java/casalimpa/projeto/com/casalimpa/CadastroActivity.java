@@ -53,11 +53,21 @@ public class CadastroActivity extends AppCompatActivity {
         //Final da Mascara CPF
 
         //Criando mascara para o campo de Telefone
+//testar if
+        //if (telEditText. ==  ){
 
-
-        SimpleMaskFormatter smfTel = new SimpleMaskFormatter("(NN)NNNNNNNNN");
+        SimpleMaskFormatter smfTel = new SimpleMaskFormatter("(NN)NNNN-NNNNN");
         MaskTextWatcher mtwTel = new MaskTextWatcher(telEditText, smfTel);
         telEditText.addTextChangedListener(mtwTel);
+          //  }else{
+
+    /*     SimpleMaskFormatter smfTel = new SimpleMaskFormatter("(NN)NNNN-NNNN");
+        MaskTextWatcher mtwTel = new MaskTextWatcher(telEditText, smfTel);
+        telEditText.addTextChangedListener(mtwTel);
+   // }*/
+
+
+
         //final da mascara Telefone
 
         //Criando mascara para o campo de Data

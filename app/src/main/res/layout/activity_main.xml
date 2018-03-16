@@ -9,58 +9,46 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/fundo_geral_casa"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="10dp">
 
-        <TextView
 
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/casa_limpa"
-            android:textSize="@dimen/tamanhoTitulosPrincipal"
-            android:textColor="@color/corLetrasGeral"/>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logovertcasalimpa" />
+
 
         <TextView
-            android:textAlignment="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/contrate_um_profissional"
-            android:textSize="@dimen/tamanhoTitulosFormulario"
-            android:textColor="@color/corLetrasGeral"/>
+            android:textAlignment="center"
+            android:textColor="@color/corLetrasGeral"
+            android:textSize="@dimen/tamanhoTitulosFormulario" />
 
-        <TextView
+        <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
+        <EditText
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/usuario"
+            android:inputType="text"
             android:textColor="@color/corLetrasGeral"
+            android:hint="Usuário"
             android:textSize="@dimen/tamanhoTextoGeral" />
 
         <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
         <EditText
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/corLetrasGeral"
-            android:textSize="@dimen/tamanhoTextoGeral" android:inputType="" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/senha"
-            android:textSize="@dimen/tamanhoTextoGeral"
-            android:textColor="@color/corLetrasGeral"/>
-
-        <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
-        <EditText
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Senha"
             android:inputType="textPassword"
-            android:textSize="@dimen/tamanhoTextoGeral"
-            android:textColor="@color/corLetrasGeral"/>
+            android:textColor="@color/corLetrasGeral"
+            android:textSize="@dimen/tamanhoTextoGeral" />
 
 
         <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
@@ -70,21 +58,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/entrar"
-            android:textSize="@dimen/tamanhoTextoBotoes"
-            android:textColor="@color/corLetrasGeral"/>
-
+            android:textColor="@color/corLetrasGeral"
+            android:textSize="@dimen/tamanhoTextoBotoes" />
 
 
         <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
         <!-- Botão apenas para teste de navegação entre paginas -->
         <Button
-            android:onClick="telaCadastro"
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="telaCadastro"
             android:text="Teste Proxima Página"
-            android:textSize="@dimen/tamanhoTextoBotoes"
-            android:textColor="@color/corLetrasGeral"/>
+            android:textColor="@color/corLetrasGeral"
+            android:textSize="@dimen/tamanhoTextoBotoes" />
 
     </LinearLayout>
 
