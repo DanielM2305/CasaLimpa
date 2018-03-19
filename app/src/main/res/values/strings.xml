@@ -7,4 +7,10 @@
     <string name="senha">Senha</string>
     <string name="cadastro">Cadastro</string>
     <string name="CadastrarPerfilButton">Cadastrar meu Perfil</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="meu_perfil">Meu perfil</string>
+    <string name="avaliacoes">Avaliações</string>
+    <string name="servicos">Serviços</string>
 </resources>

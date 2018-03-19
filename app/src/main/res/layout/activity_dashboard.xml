@@ -12,25 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="10dp">
-
-
-
-        <TextView
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Dashboard"
-            android:textSize="@dimen/tamanhoTitulosFormulario"
-            android:textColor="@color/corLetrasGeral"/>
-
-        <TextView
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notificações"
-            android:textSize="@dimen/tamanhoTitulosFormulario"
-            android:textColor="@color/corLetrasGeral"/>
+        tools:layout_editor_absoluteY="20dp">
 
 
         <ScrollView
@@ -124,8 +106,11 @@
                     android:textColor="@color/corLetrasGeral"/>
 -->
 
+
             </LinearLayout>
+
         </ScrollView>
+
 
     </LinearLayout>
 

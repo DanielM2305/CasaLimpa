@@ -13,26 +13,27 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="10dp">
 
-
-
-        <TextView
-        android:textAlignment="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/cadastro"
-        android:textSize="@dimen/tamanhoTitulosFormulario"
-        android:textColor="@color/corLetrasGeral"/>
-
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation" />
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="442dp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -59,7 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Empregador"/>
+                        android:text="Empregador" />
                 </RadioGroup>
 
 
@@ -67,8 +68,8 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
                     android:hint="Nome completo"
+                    android:inputType="textPersonName"
                     android:textColor="@color/corLetrasGeral" />
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -76,8 +77,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="E-mail"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="textEmailAddress"/>
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -85,25 +86,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nome de usuário"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:textColor="@color/corLetrasGeral" />
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Senha"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:textColor="@color/corLetrasGeral" />
 
-                                <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
+                <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:id="@+id/cpfEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="CPF"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textColor="@color/corLetrasGeral" />
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
@@ -111,8 +112,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Telefone"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="phone"/>
+                    android:inputType="phone"
+                    android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -121,8 +122,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Data de nascimento"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="date"/>
+                    android:inputType="date"
+                    android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -131,8 +132,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="CEP"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -140,8 +141,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Logradouro"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -149,8 +150,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Cidade"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -158,8 +159,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Bairro"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
@@ -167,16 +168,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Estado"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:textColor="@color/corLetrasGeral" />
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Complemento"
-                    android:textColor="@color/corLetrasGeral"
-                    android:inputType="text"/>
+                    android:inputType="text"
+                    android:textColor="@color/corLetrasGeral" />
 
                 <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
 
@@ -189,17 +190,20 @@
                     android:textSize="@dimen/tamanhoTextoBotoes" />
 
                 <Button
-                    android:onClick="telaMeuPerfil"
                     android:id="@+id/button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="telaMeuPerfil"
                     android:text="Teste Proxima Página"
-                    android:textSize="@dimen/tamanhoTextoBotoes"
-                    android:textColor="@color/corLetrasGeral"/>
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoBotoes" />
 
 
             </LinearLayout>
+
         </ScrollView>
+
+
 
     </LinearLayout>
 </android.support.v7.widget.LinearLayoutCompat>
