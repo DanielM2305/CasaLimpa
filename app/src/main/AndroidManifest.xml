@@ -10,22 +10,28 @@
         android:roundIcon="@drawable/ico_casalimpa"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".PaginaInicioActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".CadastroActivity"
-                  android:label="Cadastro"
-            />
-        <activity android:name=".MeuPerfilActivity"
-                  android:label="@string/meu_perfil"
-            />
-        <activity android:name=".Dashboard"
-                  android:label="@string/title_dashboard"
-            />
+        <activity
+            android:name=".CadastroActivity"
+            android:label="@string/cadastro" />
+        <activity
+            android:name=".MeuPerfilActivity"
+            android:label="@string/meu_perfil" />
+        <activity
+            android:name=".Dashboard"
+            android:label="@string/title_dashboard" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/login" />
+
     </application>
 
 </manifest>

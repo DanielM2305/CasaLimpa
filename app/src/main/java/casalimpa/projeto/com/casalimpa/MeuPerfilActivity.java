@@ -20,4 +20,8 @@ public class MeuPerfilActivity extends AppCompatActivity {
 
     }
 
+    public void prestadorServicos(View view){
+        Intent intent2 = new Intent(getApplicationContext(), MeuPerfilActivity.class);
+        startActivity(intent2);
+    }
 }

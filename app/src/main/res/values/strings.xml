@@ -13,4 +13,9 @@
     <string name="meu_perfil">Meu perfil</string>
     <string name="avaliacoes">Avaliações</string>
     <string name="servicos">Serviços</string>
+    <string name="title_activity_servicos_prestados">ServicosPrestadosActivity</string>
+    <string name="title_activity_meus_servicos">MeusServicosActivity</string>
+    <string name="login">Login</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="bem_vindo">Bem Vindo(a)</string>
 </resources>
