@@ -26,6 +26,7 @@ public class PainelDeControleActivity extends AppCompatActivity {
     }
     public void telaAvaliacoes(View view){
 
+
     }
     public void telaMeuPerfil(View view){
         Intent intent = new Intent(getApplicationContext(), MeuPerfilActivity.class);
