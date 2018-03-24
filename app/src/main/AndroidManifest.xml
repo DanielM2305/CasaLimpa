@@ -11,27 +11,39 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".PaginaInicioActivity">
-
+            android:name=".PaginaInicioActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".CadastroActivity"
-            android:label="@string/cadastro" />
+            android:label="@string/cadastro"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MeuPerfilActivity"
-            android:label="@string/meu_perfil" />
+            android:label="@string/meu_perfil"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Dashboard"
-            android:label="@string/title_dashboard" />
+            android:label="@string/dashboard"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/login" />
-
+            android:label="@string/login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeusServicosActivity"
+            android:label="@string/meus_servicos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdicionarNovoServicoActivity"
+            android:label="@string/adicionar_novo_servico"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PainelDeControleActivity"></activity>
     </application>
 
 </manifest>

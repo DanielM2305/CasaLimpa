@@ -1,34 +1,21 @@
 package casalimpa.projeto.com.casalimpa;
 
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-
-public class MainActivity extends AppCompatActivity {
-
+public class MeusServicosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_meus_servicos);
     }
 
-    public void loginEntrar (View view){
-        Intent intent = new Intent(getApplication(), PainelDeControleActivity.class);
+    public void adicionarNovoServico(View view){
+        Intent intent = new Intent(getApplicationContext(), AdicionarNovoServicoActivity.class);
         startActivity(intent);
+
     }
-
 }
-
-
-
-
-
-
-
-
-

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class PaginaInicioActivity extends AppCompatActivity {
 
@@ -14,6 +15,7 @@ public class PaginaInicioActivity extends AppCompatActivity {
     }
 
     public void telaCadastreSe(View view){
+
         Intent intent = new Intent(getApplicationContext(), CadastroActivity.class);
         startActivity(intent);
 

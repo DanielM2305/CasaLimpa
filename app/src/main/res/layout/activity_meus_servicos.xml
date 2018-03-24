@@ -4,17 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="casalimpa.projeto.com.casalimpa.MeuPerfilActivity">
-
-
-
+    tools:context="casalimpa.projeto.com.casalimpa.MeusServicosActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="10dp">
+        tools:layout_editor_absoluteY="10dp"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/botaoAdicionarNovoServico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/adicionar_novo_servico"
+            android:textSize="@dimen/tamanhoTextoBotoes"
+            android:textColor="@color/corLetrasGeral"
+            android:onClick="adicionarNovoServico"/>
+
 
         <ImageView
             android:layout_width="150dp"
@@ -23,10 +32,11 @@
 
             />
 
-            <!-- Dentro desta pagina ALGUNS TextView deverão ter id pois por ele será alterado o texto
-            escrito alterando o que "puxar" do banco
 
-            Coloquei id's genericos durante a programação alterarei -->
+        <!-- Dentro desta pagina ALGUNS TextView deverão ter id pois por ele será alterado o texto
+        escrito alterando o que "puxar" do banco
+
+        Coloquei id's genericos durante a programação alterarei -->
 
 
         <ScrollView
@@ -41,13 +51,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Login:"
+                    android:text="Categoria:"
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTitulosFormulario" />
 
                 <!-- o id será usado para consulta no banco -->
                 <TextView
-                    android:id="@+id/textLoginId"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sem dados"
@@ -57,13 +67,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="E-mail:"
+                    android:text="Prazo médio para atendimento"
                     android:textSize="@dimen/tamanhoTitulosFormulario"
                     android:textColor="@color/corLetrasGeral"/>
 
                 <!-- o id será usado para consulta no banco -->
                 <TextView
-                    android:id="@+id/textEmailId"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sem dados"
@@ -74,13 +84,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CPF/CNPJ:"
+                    android:text="Preço sugerido"
                     android:textSize="@dimen/tamanhoTitulosFormulario"
                     android:textColor="@color/corLetrasGeral"/>
 
                 <!-- o id será usado para consulta no banco -->
                 <TextView
-                    android:id="@+id/textCpfId"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sem dados"
@@ -91,63 +101,47 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Endereço Principal:"
+                    android:text="Prestador"
                     android:textSize="@dimen/tamanhoTitulosFormulario"
                     android:textColor="@color/corLetrasGeral"/>
 
                 <!-- o id será usado para consulta no banco -->
                 <TextView
-                    android:id="@+id/textLogradouroId"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resgitro Salarial"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
                     android:textColor="@color/corLetrasGeral"/>
 
                 <!-- o id será usado para consulta no banco -->
                 <TextView
-                    android:id="@+id/textCidadeId"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Sem dados"
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
-                <!-- o id será usado para consulta no banco -->
-                <TextView
-                    android:id="@+id/textBairroId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <!-- o id será usado para consulta no banco -->
-                <TextView
-                    android:id="@+id/textEstadoId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <!-- o id será usado para consulta no banco -->
-                <TextView
-                    android:id="@+id/textComplementoId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
                 <Button
-
+                    android:id="@+id/botaoDesabilitarServico"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Editar Perfil"
+                    android:text="@string/desabilitar_servico"
                     android:textSize="@dimen/tamanhoTextoBotoes"
-                    android:textColor="@color/corLetrasGeral"/>
+                    android:textColor="@color/corLetrasGeral"
+                    />
+
+
+
 
 
 
@@ -156,20 +150,8 @@
         </ScrollView>
 
 
-
-
-
-
-
-
-
     </LinearLayout>
 
 
 
 </android.support.v7.widget.LinearLayoutCompat>
-
-
-
-
-

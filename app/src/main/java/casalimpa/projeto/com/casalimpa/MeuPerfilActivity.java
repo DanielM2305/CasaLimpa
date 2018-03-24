@@ -14,14 +14,5 @@ public class MeuPerfilActivity extends AppCompatActivity {
     }
 
 
-    public void telaDashboard(View view){
-        Intent intent = new Intent(getApplicationContext(), Dashboard.class);
-        startActivity(intent);
 
-    }
-
-    public void prestadorServicos(View view){
-        Intent intent2 = new Intent(getApplicationContext(), MeuPerfilActivity.class);
-        startActivity(intent2);
-    }
 }

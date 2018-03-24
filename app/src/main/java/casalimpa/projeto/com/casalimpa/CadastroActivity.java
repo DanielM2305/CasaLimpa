@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
@@ -92,10 +93,12 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
 
-    public void telaMeuPerfil(View view){
-        Intent intent2 = new Intent(getApplicationContext(), MeuPerfilActivity.class);
-        startActivity(intent2);
+    public void cadastrarUsuario(View view){
+        Intent intent = new Intent(getApplicationContext(), PaginaInicioActivity.class);
+        startActivity(intent);
+
     }
+
 
 
 

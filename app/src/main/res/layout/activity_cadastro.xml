@@ -172,21 +172,13 @@
 
                 <!-- Botão apenas para teste de navegação entre paginas -->
                 <Button
+                    android:id="@+id/botaoCadastrar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Cadastrar"
                     android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoBotoes" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="telaMeuPerfil"
-                    android:text="Teste Proxima Página"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoBotoes" />
-
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:onClick="cadastrarUsuario"/>
 
             </LinearLayout>
 
