@@ -6,31 +6,44 @@
     android:layout_height="match_parent"
     tools:context="casalimpa.projeto.com.casalimpa.PainelDeControleActivity">
 
+
+    <!--
+    Aqui se encontra o Layout dos botões, o que for alterado aqui altera todos os botões
+    de navegação principal do app
+
+
+    -->
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#000000">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_gravity="top|center_horizontal"
             android:orientation="horizontal">
 
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@android:drawable/ic_dialog_email"
-                android:onClick="meusServicosBotao" />
+                android:onClick="meusServicosBotao"
+                android:src="@android:drawable/ic_dialog_email" />
 
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="contratarServicosBotao"
-                android:src="@android:drawable/ic_menu_add"/>
+                android:src="@android:drawable/ic_menu_add" />
+
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="servicosPrestadosBotao"
-                android:src="@android:drawable/ic_menu_manage"/>
+                android:src="@android:drawable/ic_menu_manage" />
+
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -41,12 +54,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="meuperfilBotao"
-                android:src="@android:drawable/ic_menu_myplaces"/>
+                android:src="@android:drawable/ic_menu_myplaces" />
+
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="sairBotao"
-                android:src="@android:drawable/btn_dialog"/>
+                android:src="@android:drawable/btn_dialog" />
         </LinearLayout>
 
     </GridLayout>
