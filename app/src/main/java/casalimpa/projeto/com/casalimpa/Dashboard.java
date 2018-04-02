@@ -3,7 +3,9 @@ package casalimpa.projeto.com.casalimpa;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Dashboard extends AppCompatActivity {
+import casalimpa.projeto.com.casalimpa.funcoesExternas.MenusFuncionais;
+
+public class Dashboard extends MenusFuncionais {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

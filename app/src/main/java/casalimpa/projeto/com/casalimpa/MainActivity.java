@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loginEntrar (View view){
-        Intent intent = new Intent(getApplication(), PainelDeControleActivity.class);
+        Intent intent = new Intent(getApplication(), Dashboard.class);
         startActivity(intent);
     }
 

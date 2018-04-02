@@ -7,14 +7,29 @@
     tools:context="casalimpa.projeto.com.casalimpa.MeuPerfilActivity">
 
 
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
+        <include
+            layout="@layout/activity_painel_de_controle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="10dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
 
         <ImageView
             android:layout_width="150dp"
@@ -165,7 +180,7 @@
 
     </LinearLayout>
 
-
+    </GridLayout>
 
 </android.support.v7.widget.LinearLayoutCompat>
 

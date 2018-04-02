@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MeusServicosActivity extends AppCompatActivity {
+import casalimpa.projeto.com.casalimpa.funcoesExternas.MenusFuncionais;
+
+public class MeusServicosActivity extends MenusFuncionais {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

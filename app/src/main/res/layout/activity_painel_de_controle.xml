@@ -6,74 +6,49 @@
     android:layout_height="match_parent"
     tools:context="casalimpa.projeto.com.casalimpa.PainelDeControleActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/botaoMeusServicos"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/meus_servicos"
-        tools:ignore="MissingConstraints"
-        android:textSize="@dimen/tamanhoTextoGeral"
-        android:textColor="@color/corLetrasGeral"
-        android:onClick="telaMeusServicos"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/botaoContratarServico"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/contratar_servico"
-        tools:ignore="MissingConstraints"
-        android:textSize="@dimen/tamanhoTextoGeral"
-        android:textColor="@color/corLetrasGeral"
-        android:onClick="telaContratarServico"
-        />
-    <Button
-        android:id="@+id/botaoServicosPrestados"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/servicos_prestados"
-        tools:ignore="MissingConstraints"
-        android:textSize="@dimen/tamanhoTextoGeral"
-        android:textColor="@color/corLetrasGeral"
-        android:onClick="telaServicoPrestados"
-        />
-    <Button
-        android:id="@+id/botaoAvaliacoes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/avaliacoes"
-        tools:ignore="MissingConstraints"
-        android:textSize="@dimen/tamanhoTextoGeral"
-        android:textColor="@color/corLetrasGeral"
-        android:onClick="telaAvaliacoes"
-        />
-    <Button
-        android:id="@+id/botaoMeuperfil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/meu_perfil"
-        tools:ignore="MissingConstraints"
-        android:textSize="@dimen/tamanhoTextoGeral"
-        android:textColor="@color/corLetrasGeral"
-        android:onClick="telaMeuPerfil"
-        />
-    <Button
-        android:id="@+id/botaoSair"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sair"
-        tools:ignore="MissingConstraints"
-        android:textSize="@dimen/tamanhoTextoGeral"
-        android:textColor="@color/corLetrasGeral"
-        android:onClick="telaBotaosair"
-        />
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@android:drawable/ic_dialog_email"
+                android:onClick="meusServicosBotao" />
 
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="contratarServicosBotao"
+                android:src="@android:drawable/ic_menu_add"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="servicosPrestadosBotao"
+                android:src="@android:drawable/ic_menu_manage"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="avaliacoesBotao"
+                android:src="@android:drawable/star_big_off" />
 
-</LinearLayout>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="meuperfilBotao"
+                android:src="@android:drawable/ic_menu_myplaces"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="sairBotao"
+                android:src="@android:drawable/btn_dialog"/>
+        </LinearLayout>
 
+    </GridLayout>
 
 </android.support.constraint.ConstraintLayout>
