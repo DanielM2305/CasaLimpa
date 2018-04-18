@@ -23,15 +23,11 @@
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTextoGeral" />
 
-        <!-- Falta criar o ExpandableListView vou pequisar -->
-
-        <ExpandableListView
+        <Spinner
+            android:id="@+id/categoriaServicoSpinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-
-            />
-
+            android:layout_height="wrap_content">
+        </Spinner>
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -56,6 +52,38 @@
                             android:hint="Observações Importantes"
                             android:inputType="textLongMessage"
                             android:textColor="@color/corLetrasGeral" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Imagem Principal"
+                            android:textStyle="bold"
+                            android:textColor="@color/corLetrasGeral"
+                            android:textSize="@dimen/tamanhoTextoGeral"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Importante: serviços com imagem tem maior aceitação dos usuários"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/tamanhoTextoGeral"
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/ic_menu_camera"
+                            android:text="Escolher arquivo"
+                            android:textColor="@color/corLetrasGeral"
+                            android:textSize="@dimen/tamanhoTextoGeral"
+                            />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Nenhum arquivo selecionado"
+                               android:textStyle="bold"
+                               android:textSize="@dimen/tamanhoTextoGeral"
+                               />
 
 
 

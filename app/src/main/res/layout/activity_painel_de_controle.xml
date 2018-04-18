@@ -3,22 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="casalimpa.projeto.com.casalimpa.PainelDeControleActivity">
 
 
     <!--
     Aqui se encontra o Layout dos botões, o que for alterado aqui altera todos os botões
     de navegação principal do app
-
-
     -->
+    <!--Ignorar os Erros no onClick está funcionando normalmente-->
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#000000">
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -30,37 +29,38 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="meusServicosBotao"
-                android:src="@android:drawable/ic_dialog_email" />
+                android:background="@drawable/ico_meus_servicos"
+                />
 
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="contratarServicosBotao"
-                android:src="@android:drawable/ic_menu_add" />
+                android:background="@drawable/ico_contratar" />
 
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="servicosPrestadosBotao"
-                android:src="@android:drawable/ic_menu_manage" />
+                android:background="@drawable/ico_servicos_prestados" />
 
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="avaliacoesBotao"
-                android:src="@android:drawable/star_big_off" />
+                android:background="@drawable/ico_avaliacoes" />
 
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="meuperfilBotao"
-                android:src="@android:drawable/ic_menu_myplaces" />
+                android:background="@drawable/ico_meu_perfil" />
 
             <ImageButton
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:onClick="sairBotao"
-                android:src="@android:drawable/btn_dialog" />
+                android:background="@drawable/ico_sair" />
         </LinearLayout>
 
     </GridLayout>

@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     tools:context="casalimpa.projeto.com.casalimpa.MeusServicosActivity">
 
-
+    <!--Atenção: MeusServicosActivity, Servicos.java, ServicosAdapter.java e activity_meus_servicos.xml
+                  Funcionam em conjunto qualquer alteração pode gerar erros pois elas juntas são o ListView de Serviços-->
+    <!--Erro a se consertar (Está cortanto o último serviço)-->
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="50dp"
@@ -24,150 +28,29 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-
-        <Button
-            android:id="@+id/botaoAdicionarNovoServico"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/adicionar_novo_servico"
-            android:textSize="@dimen/tamanhoTextoBotoes"
-            android:textColor="@color/corLetrasGeral"
-            android:onClick="adicionarNovoServico"/>
-
-
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="100dp"
-            app:srcCompat="@android:drawable/ic_menu_camera"
-
-            />
-
-
-        <!-- Dentro desta pagina ALGUNS TextView deverão ter id pois por ele será alterado o texto
-        escrito alterando o que "puxar" do banco
-
-        Coloquei id's genericos durante a programação alterarei -->
-
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/botaoAdicionarNovoServico"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Categoria:"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTitulosFormulario" />
-
-                <!-- o id será usado para consulta no banco -->
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Prazo médio para atendimento"
-                    android:textSize="@dimen/tamanhoTitulosFormulario"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <!-- o id será usado para consulta no banco -->
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
+                android:text="@string/adicionar_novo_servico"
+                android:textSize="@dimen/tamanhoTextoBotoes"
+                android:textColor="@color/corLetrasGeral"
+                android:onClick="adicionarNovoServico"/>
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Preço sugerido"
-                    android:textSize="@dimen/tamanhoTitulosFormulario"
-                    android:textColor="@color/corLetrasGeral"/>
+            <ListView
+                android:id="@+id/ServicosListViewId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 />
 
-                <!-- o id será usado para consulta no banco -->
-                <TextView
+            <!--Erro a se consertar (Está cortanto o último serviço)-->
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Prestador"
-                    android:textSize="@dimen/tamanhoTitulosFormulario"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <!-- o id será usado para consulta no banco -->
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Resgitro Salarial"
-                    android:textSize="@dimen/tamanhoTitulosFormulario"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <!-- o id será usado para consulta no banco -->
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sem dados"
-                    android:textSize="@dimen/tamanhoTextoGeral"
-                    android:textColor="@color/corLetrasGeral"/>
-
-                <Button
-                    android:id="@+id/botaoDesabilitarServico"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/desabilitar_servico"
-                    android:textSize="@dimen/tamanhoTextoBotoes"
-                    android:textColor="@color/corLetrasGeral"
-                    />
-
-
-
-
-
-
-
-            </LinearLayout>
-        </ScrollView>
-
-
-    </LinearLayout>
+        </LinearLayout>
 
 </GridLayout>
 
