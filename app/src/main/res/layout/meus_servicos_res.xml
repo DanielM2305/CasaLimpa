@@ -21,6 +21,7 @@
         android:layout_gravity="bottom"
         android:foregroundGravity="left"
         android:background="@android:drawable/ic_delete"
+        android:onClick="desativarServico"
         />
 
     <HorizontalScrollView

@@ -75,6 +75,7 @@
                             android:text="Escolher arquivo"
                             android:textColor="@color/corLetrasGeral"
                             android:textSize="@dimen/tamanhoTextoGeral"
+                            android:onClick="uploadImagem"
                             />
 
                            <TextView

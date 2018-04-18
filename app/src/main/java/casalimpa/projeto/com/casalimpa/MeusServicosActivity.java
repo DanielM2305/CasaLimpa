@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,10 @@ public class MeusServicosActivity extends MenusFuncionais {
         meus_servicos_res.setAdapter(adapter);
 
 /**/
+    }
+
+    public void desativarServico(View view){
+        Toast.makeText(this, "Excluir Serviço", Toast.LENGTH_SHORT).show();
     }
 
     private ArrayList<Servicos> adicionarServico() {
@@ -71,6 +76,13 @@ public class MeusServicosActivity extends MenusFuncionais {
                 "Akson", "500,00R$"
                 , R.drawable.ico_casalimpa);
         servicos.add(e);
+
+        e = new Servicos("Organizador do Lar 'Exemplo'",
+                "25hr", "2.000,00R$",
+                "Fábio", "2.500,00R$"
+                , R.drawable.ico_casalimpa);
+        servicos.add(e);
+
 
 
         return servicos;

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 public class AdicionarNovoServicoActivity extends AppCompatActivity {
@@ -24,6 +25,9 @@ public class AdicionarNovoServicoActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_dropdown_item);
         categoriaServico.setAdapter(adapterCategoriaServico);
 
+    }
+    public void uploadImagem (View view){
+        Toast.makeText(this, "Selecione uma foto", Toast.LENGTH_SHORT).show();
     }
 
 

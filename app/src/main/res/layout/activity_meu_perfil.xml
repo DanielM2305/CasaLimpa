@@ -7,7 +7,7 @@
     tools:context="casalimpa.projeto.com.casalimpa.MeuPerfilActivity">
 
 
-    <GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -31,13 +31,6 @@
         tools:layout_editor_absoluteY="0dp">
 
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="170dp"
-            app:srcCompat="@android:drawable/ic_menu_camera"
-
-            />
-
             <!-- Dentro desta pagina ALGUNS TextView deverão ter id pois por ele será alterado o texto
             escrito alterando o que "puxar" do banco
 
@@ -53,6 +46,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perfil Principal"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTitulosPrincipal" />
+
+                <ImageView
+                    android:id="@+id/imagemPerfilPrincipalId"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    app:srcCompat="@android:drawable/ic_menu_camera"
+                    android:layout_gravity="center_horizontal"
+                    />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -155,32 +162,221 @@
                     android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
-                <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
+
+                <!-- Alguns botões foram comentados porque só serão implementados ao haver comunicação
+                 com o banco -->
+<!--
                 <Button
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Editar Perfil"
                     android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:textColor="@color/corLetrasGeral"
+                    android:onClick="editarPerfil"/>
+-->
+                <!---->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prestador de serviço"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTitulosPrincipal" />
+                <ImageView
+                    android:id="@+id/imagemPrestadorServicoId"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    app:srcCompat="@android:drawable/ic_menu_camera"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nome"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTitulosFormulario" />
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/nomePSId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/telefonePSId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
                     android:textColor="@color/corLetrasGeral"/>
 
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registro Salarial:"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/registroSalarialPSId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
 
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Área Atuação"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/areaAtualcaoPSId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!-- o id será usado para consulta no banco -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Endereço Principal"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/enderecoPrincipalPSId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
+<!--
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar Perfil - Prestador de Serviço"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:textColor="@color/corLetrasGeral"
+                    android:onClick="editarPerfilPrestadorServico"/>
+
+                -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Empregador"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTitulosPrincipal" />
+                <ImageView
+                    android:id="@+id/imagemEmpregadorId"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    app:srcCompat="@android:drawable/ic_menu_camera"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nome"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTitulosFormulario" />
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/nomeEmpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/telefoneEmpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data de Nascimento"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!-- o id será usado para consulta no banco -->
+                <TextView
+                    android:id="@+id/dataNascimentoEmpId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sem dados"
+                    android:textSize="@dimen/tamanhoTextoGeral"
+                    android:textColor="@color/corLetrasGeral"/>
+
+                <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
+
+<!--
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar Perfil - Empregador"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:textColor="@color/corLetrasGeral"
+                    android:onClick="editarPerfilEmpregador"/>
+-->
+
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Editar Perfil"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:textColor="@color/corLetrasGeral"
+                    android:onClick="editarPerfil"/>
+
+                
             </LinearLayout>
         </ScrollView>
 
-
-
-
-
-
-
-
-
     </LinearLayout>
 
-    </GridLayout>
+</LinearLayout>
 
 </android.support.v7.widget.LinearLayoutCompat>
 

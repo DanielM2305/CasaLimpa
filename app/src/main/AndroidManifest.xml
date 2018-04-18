@@ -45,7 +45,10 @@
             android:label="@string/adicionar_novo_servico"
             android:screenOrientation="portrait" />
         <activity android:name=".PainelDeControleActivity" />
-        <activity android:name=".AvaliacoesActivity"></activity>
+        <activity
+            android:name=".AvaliacoesActivity"
+            android:label="@string/avaliacoes" />
+        <activity android:name=".EditarPerfilActivity"></activity>
     </application>
 
 </manifest>
