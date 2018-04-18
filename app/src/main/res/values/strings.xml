@@ -27,14 +27,14 @@
     <string name="servicos_prestados">Serviços Prestados</string>
     <string name="sair">Sair</string>
 
-<string-array name="categoria_servico">
-    <item>Selecione um item</item>
-    <item>Alimentação</item>
-    <item>Instalação e manuntenção de equipamentos</item>
-    <item>Limpeza</item>
-    <item>Manuntenção Preventiva</item>
-    <item>Organização do lar</item>
-    <item>Pequenos Reparos</item>
-    <item>Reformas</item>
-</string-array>
+    <string-array name="categoria_servico">
+        <item>Selecione um item</item>
+        <item>Alimentação</item>
+        <item>Instalação e manuntenção de equipamentos</item>
+        <item>Limpeza</item>
+        <item>Manuntenção Preventiva</item>
+        <item>Organização do lar</item>
+        <item>Pequenos Reparos</item>
+        <item>Reformas</item>
+    </string-array>
 </resources>

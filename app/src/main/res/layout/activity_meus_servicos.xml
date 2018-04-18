@@ -10,7 +10,7 @@
                   Funcionam em conjunto qualquer alteração pode gerar erros pois elas juntas são o ListView de Serviços-->
     <!--Erro a se consertar (Está cortanto o último serviço)-->
 
-    <GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -52,6 +52,6 @@
 
         </LinearLayout>
 
-</GridLayout>
+</LinearLayout>
 
 </android.support.v7.widget.LinearLayoutCompat>

@@ -14,7 +14,6 @@
             android:name=".PaginaInicioActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,7 +44,8 @@
             android:name=".AdicionarNovoServicoActivity"
             android:label="@string/adicionar_novo_servico"
             android:screenOrientation="portrait" />
-        <activity android:name=".PainelDeControleActivity"></activity>
+        <activity android:name=".PainelDeControleActivity" />
+        <activity android:name=".AvaliacoesActivity"></activity>
     </application>
 
 </manifest>

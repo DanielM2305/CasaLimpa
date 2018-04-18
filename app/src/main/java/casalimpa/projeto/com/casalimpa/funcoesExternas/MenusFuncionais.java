@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import casalimpa.projeto.com.casalimpa.AvaliacoesActivity;
 import casalimpa.projeto.com.casalimpa.MeuPerfilActivity;
 import casalimpa.projeto.com.casalimpa.MeusServicosActivity;
 import casalimpa.projeto.com.casalimpa.PaginaInicioActivity;
@@ -33,6 +34,8 @@ public class MenusFuncionais extends AppCompatActivity {
 
     public void avaliacoesBotao(View view){
         Toast.makeText(this, "Avaliações", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), AvaliacoesActivity.class);
+        startActivity(intent);
     }
 
     public void meuperfilBotao(View view){

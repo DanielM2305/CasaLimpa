@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="casalimpa.projeto.com.casalimpa.AvaliacoesActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="top|center_horizontal">
+            <include
+                layout="@layout/activity_painel_de_controle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="Cliente"
+            android:textSize="@dimen/tamanhoTitulosFormulario"
+            android:textStyle="bold"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:background="#347bb7">
+                <TextView
+                    android:id="@+id/percentualAvaliacoesId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textSize="@dimen/tamanhoTextoNumeroAvaliacoes"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Percentual de aceitação!"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textStyle="bold"/>
+            </TableRow>
+            <TableRow
+                android:background="#5db85d">
+                <TextView
+                    android:id="@+id/qualificacoesRealizadasId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="@dimen/tamanhoTextoNumeroAvaliacoes"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Qualificações Realizadas!"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textStyle="bold"/>
+            </TableRow>
+            <TableRow
+                android:background="#f0ad4f">
+                <TextView
+                    android:id="@+id/notaFinalId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="@dimen/tamanhoTextoNumeroAvaliacoes"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nota final!"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textStyle="bold"/>
+            </TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:text="Prestador de Serviço"
+                android:textSize="@dimen/tamanhoTitulosFormulario"
+                android:textStyle="bold"/>
+            <TableRow
+                android:background="#5db85d">
+                <TextView
+                    android:id="@+id/clientesSatisfeitosId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="@dimen/tamanhoTextoNumeroAvaliacoes"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clientes Satisfeitos!"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textStyle="bold"/>
+            </TableRow>
+            <TableRow
+                android:background="#d95450">
+                <TextView
+                    android:id="@+id/clientesInsatisfeitosIdId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="@dimen/tamanhoTextoNumeroAvaliacoes"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clientes Insatisfeitos!"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textStyle="bold"/>
+            </TableRow>
+            <TableRow
+                android:background="#347bb7">
+                <TextView
+                    android:id="@+id/mediaId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="@dimen/tamanhoTextoNumeroAvaliacoes"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Média!"
+                    android:textColor="@color/corLetrasBrancas"
+                    android:textSize="@dimen/tamanhoTitulosFormulario"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+  </ScrollView>
+ </LinearLayout>
+</LinearLayout>
+
+
+</android.support.v7.widget.LinearLayoutCompat>
