@@ -24,11 +24,19 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
 
     private final Context context;
     private final ArrayList<Servicos> elementos;
+    private String layoutInfo;
 
     public ServicosAdapter(Context context, ArrayList<Servicos> elementos) {
         super(context, R.layout.meus_servicos_res, elementos);
         this.context = context;
         this.elementos = elementos;
+    }
+
+    public ServicosAdapter(Context context, ArrayList<Servicos> elementos, String layoutInfo) {
+        super(context, R.layout.meus_servicos_res, elementos);
+        this.context = context;
+        this.elementos = elementos;
+        this.layoutInfo = layoutInfo;
     }
 
 
@@ -37,7 +45,17 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
 
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.meus_servicos_res, parent, false);
+
+        View rowView = null;
+
+
+        if(layoutInfo != null && layoutInfo.equals("SERVICOS_PRESTADOS")){
+            rowView = inflater.inflate(R.layout.meus_servicos_prestados_res, parent, false);
+
+        }else{
+            rowView = inflater.inflate(R.layout.meus_servicos_res, parent, false);
+
+        }
 
 
         TextView  categoria          = (TextView) rowView.findViewById(R.id.categoriaId);
@@ -45,6 +63,8 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
         TextView  precoSugerido      = (TextView) rowView.findViewById(R.id.precoSugeridoId);
         TextView  prestadorServico   = (TextView) rowView.findViewById(R.id.prestadorServicoId);
         TextView  registroSalarial   = (TextView) rowView.findViewById(R.id.registroSalarialId);
+        TextView  statusServico   = (TextView) rowView.findViewById(R.id.statusServicoId);
+
         ImageView fotoServico        = (ImageView) rowView.findViewById(R.id.fotoServicoId);
 
                  categoria.setText(elementos.get(position).getCategoria());
@@ -53,6 +73,10 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
                  prestadorServico.setText(elementos.get(position).getPrestadorServico());
                  registroSalarial.setText(elementos.get(position).getRegistroSalarial());
                  fotoServico.setImageResource(elementos.get(position).getFotoServico());
+                 if(elementos.get(position).getStatusAtual() != null){
+                     statusServico.setText(elementos.get(position).getStatusAtual());
+                 }
+
         return rowView;
     }
 

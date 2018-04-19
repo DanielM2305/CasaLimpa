@@ -6,9 +6,11 @@ import android.view.View;
 import android.widget.Toast;
 
 import casalimpa.projeto.com.casalimpa.AvaliacoesActivity;
+import casalimpa.projeto.com.casalimpa.ContratarServicosActivity;
 import casalimpa.projeto.com.casalimpa.MeuPerfilActivity;
 import casalimpa.projeto.com.casalimpa.MeusServicosActivity;
 import casalimpa.projeto.com.casalimpa.PaginaInicioActivity;
+import casalimpa.projeto.com.casalimpa.ServicosPrestadosActivity;
 
 
 /**
@@ -25,10 +27,14 @@ public class MenusFuncionais extends AppCompatActivity {
 
     public void contratarServicosBotao(View view){
         Toast.makeText(this, "Contratar Serviços", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), ContratarServicosActivity.class);
+        startActivity(intent);
     }
 
     public void servicosPrestadosBotao(View view){
         Toast.makeText(this, "Serviços Prestados", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), ServicosPrestadosActivity.class);
+        startActivity(intent);
     }
 
 

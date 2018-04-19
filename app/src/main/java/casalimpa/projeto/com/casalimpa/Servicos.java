@@ -18,7 +18,8 @@ public class Servicos {
             prazoMedioSugerido,
             precoSugerido,
             prestadorServico,
-            registroSalarial;
+            registroSalarial,
+            statusAtual;
 
     private int fotoServico;
 
@@ -29,6 +30,17 @@ public class Servicos {
         this.prestadorServico = prestadorServico;
         this.registroSalarial = registroSalarial;
         this.fotoServico = fotoServico;
+
+    }
+
+    public Servicos(String categoria, String prazoMedioSugerido, String precoSugerido, String prestadorServico, String registroSalarial, int fotoServico, String statusAtual) {
+        this.categoria = categoria;
+        this.prazoMedioSugerido = prazoMedioSugerido;
+        this.precoSugerido = precoSugerido;
+        this.prestadorServico = prestadorServico;
+        this.registroSalarial = registroSalarial;
+        this.fotoServico = fotoServico;
+        this.statusAtual = statusAtual;
 
     }
 
@@ -78,6 +90,14 @@ public class Servicos {
 
     public void setFotoServico(int fotoServico) {
         this.fotoServico = fotoServico;
+    }
+
+    public String getStatusAtual() {
+        return statusAtual;
+    }
+
+    public void setStatusAtual(String statusAtual) {
+        this.statusAtual = statusAtual;
     }
 }
 

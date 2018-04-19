@@ -37,4 +37,17 @@
         <item>Pequenos Reparos</item>
         <item>Reformas</item>
     </string-array>
+
+    <string-array name="cidades">
+        <item>Selecione um item</item>
+        <item>Brasília</item>
+        <item>São Paulo</item>
+    </string-array>
+
+    <string-array name="bairros">
+        <item>Selecione um item</item>
+        <item>Qd 100</item>
+        <item>Qd 200</item>
+        <item>Limpeza</item>
+    </string-array>
 </resources>
