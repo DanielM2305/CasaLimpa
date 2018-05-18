@@ -30,7 +30,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     //compile 'com.github.rtoshiro.mflibrary:mflibrary:1.0.0' começarei a fazer alterações aqui
     //mascara (https://www.youtube.com/watch?v=xdKGNvNx0UA)
-    compile 'com.github.rtoshiro.mflibrary:mflibrary:1.0.0'
+    implementation 'com.github.rtoshiro.mflibrary:mflibrary:1.0.0'
 
 
 }

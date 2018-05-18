@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="casalimpa.projeto.com.casalimpa.ServicosPrestadosActivity">
+
+    <!--Atenção: MeusServicosActivity, Servicos.java, ServicosAdapter.java e activity_meus_servicos.xml
+                  Funcionam em conjunto qualquer alteração pode gerar erros pois elas juntas são o ListView de Serviços-->
+    <!--Erro a se consertar (Está cortanto o último serviço)-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_gravity="top|center_horizontal">
+        <include
+            layout="@layout/activity_painel_de_controle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/idServicosPrestadosListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 />
+
+            <!--Erro a se consertar (Está cortanto o último serviço)-->
+
+        </LinearLayout>
+
+</LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>
