@@ -1,14 +1,38 @@
 package casalimpa.projeto.com.casalimpa;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -84,19 +108,55 @@ public class CadastroActivity extends AppCompatActivity {
 
         //final da mascara de CEP
 
-
-
-
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy =
+                    new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
 
 
     }
 
 
-    public void cadastrarUsuario(View view){
+    public void cadastrarUsuario(View view) throws IOException {
+
+       try {
+
+
         Intent intent = new Intent(getApplicationContext(), PaginaInicioActivity.class);
         startActivity(intent);
 
+
+           HttpClient client = new DefaultHttpClient();
+           HttpPost post = new HttpPost("http://192.168.43.113:80/casaLimpa/android/api.php");
+
+           List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+           pairs.add(new BasicNameValuePair("parametro1", "JAKU"));
+           pairs.add(new BasicNameValuePair("parametro2", "FABU"));
+           post.setEntity(new UrlEncodedFormEntity(pairs));
+           HttpResponse response = client.execute(post);
+
+           String responseAsString = EntityUtils.toString(response.getEntity());
+
+           Toast.makeText(this, responseAsString, Toast.LENGTH_SHORT).show();
+/*
+        HttpPost httppost = new
+                HttpPost("http://192.168.43.113:80/casaLimpa/android/api.php");
+        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+        nameValuePairs.add(new BasicNameValuePair("parametro1", "daniel111"));
+        nameValuePairs.add(new BasicNameValuePair("parametro2", "marcos222"));
+        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+        HttpResponse response = httpclient.execute(httppost);
+        HttpEntity entity = response.getEntity();
+        InputStream is = entity.getContent();
+        Log.i("postData", response.getStatusLine().toString());
+*/  }catch (ClientProtocolException cpe){
+          System.out.print(cpe.getMessage());
+
+    }catch (IOException e){
+        System.out.print(e.getMessage());
+    }
     }
 
 
