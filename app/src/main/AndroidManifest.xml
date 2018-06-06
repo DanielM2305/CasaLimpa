@@ -47,10 +47,13 @@
         <activity android:name=".PainelDeControleActivity" />
         <activity
             android:name=".AvaliacoesActivity"
-            android:label="@string/avaliacoes" />
-        <activity android:name=".EditarPerfilActivity"></activity>
-        <activity android:name=".ContratarServicosActivity" android:label="Contratar Serviços"></activity>
-        <activity android:name=".ServicosPrestadosActivity" android:label="Serviços Prestados"></activity>
+            android:label="@string/avaliacoes"
+            android:screenOrientation="portrait" />
+        <activity android:name=".EditarPerfilActivity"
+            android:label="@string/editar_perfil"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ContratarServicosActivity" android:label="Contratar Serviços" android:screenOrientation="portrait"></activity>
+        <activity android:name=".ServicosPrestadosActivity" android:label="Serviços Prestados" android:screenOrientation="portrait"></activity>
 
     </application>
 

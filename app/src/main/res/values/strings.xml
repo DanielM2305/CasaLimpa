@@ -25,6 +25,7 @@
     <string name="cancelar">Cancelar</string>
     <string name="contratar_servico">Contratar Serviço</string>
     <string name="servicos_prestados">Serviços Prestados</string>
+    <string name="editar_perfil">Editar Perfil</string>
     <string name="sair">Sair</string>
 
     <string-array name="categoria_servico">
