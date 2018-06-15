@@ -127,36 +127,44 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/logradouroEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Logradouro"
+                    android:enabled="false"
                     android:inputType="text"
                     android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/cidadeEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Cidade"
+                    android:enabled="false"
                     android:inputType="text"
                     android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/bairroEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Bairro"
+                    android:enabled="false"
                     android:inputType="text"
                     android:textColor="@color/corLetrasGeral" />
 
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/estadoEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Estado"
+                    android:enabled="false"
                     android:inputType="text"
                     android:textColor="@color/corLetrasGeral" />
 

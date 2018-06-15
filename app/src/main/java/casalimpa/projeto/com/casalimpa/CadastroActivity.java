@@ -24,6 +24,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,6 +42,13 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText cpfEditText;
     private EditText dataEditText;
     private EditText cepEditText;
+
+    private EditText logradouroEditText;
+    private EditText estadoEditText;
+    private EditText cidadeEditText;
+    private EditText bairroEditText;
+
+    private Long idLogradouro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +77,10 @@ public class CadastroActivity extends AppCompatActivity {
         telEditText = (EditText) findViewById(R.id.telEditTextId);
         dataEditText = (EditText) findViewById(R.id.dataEditTextId);
         cepEditText = (EditText) findViewById(R.id.cepEditTextId);
-
+        logradouroEditText = (EditText) findViewById(R.id.logradouroEditTextId);
+        estadoEditText = (EditText) findViewById(R.id.estadoEditTextId);
+        cidadeEditText = (EditText) findViewById(R.id.cidadeEditTextId);
+        bairroEditText = (EditText) findViewById(R.id.bairroEditTextId);
 
         //Mascara de Cpf
         SimpleMaskFormatter smfCpf = new SimpleMaskFormatter("NNN.NNN.NNN-NN");
@@ -105,6 +117,62 @@ public class CadastroActivity extends AppCompatActivity {
         SimpleMaskFormatter smfCep = new SimpleMaskFormatter("NN.NNN-NNN");
         MaskTextWatcher mtwCep = new MaskTextWatcher(cepEditText, smfCep);
         cepEditText.addTextChangedListener(mtwCep);
+
+
+        cepEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+
+                try {
+                if(!hasFocus) {
+
+                    logradouroEditText.setText(null);
+                    estadoEditText.setText(null);
+                    cidadeEditText.setText(null);
+                    bairroEditText.setText(null);
+
+                    HttpClient client = new DefaultHttpClient();
+                    HttpPost post = new HttpPost("http://192.168.43.113:80/casaLimpa/android/api_cep_request.php");
+
+                    List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+                    pairs.add(new BasicNameValuePair("cep", cepEditText.getText().toString().replace(".","").replace("-","")));
+
+                    HttpResponse response = null;
+                    String responseAsString = null;
+
+                        post.setEntity(new UrlEncodedFormEntity(pairs));
+                        response = client.execute(post);
+                        responseAsString = EntityUtils.toString(response.getEntity());
+
+                        JSONObject json = new JSONObject(responseAsString);
+                        if(json.get("result").equals("true")){
+                            logradouroEditText.setText(json.get("logradouro").toString());
+                            estadoEditText.setText(json.get("uf").toString());
+                            cidadeEditText.setText(json.get("cidade").toString());
+                            bairroEditText.setText(json.get("bairro").toString());
+                            idLogradouro = new Long(json.get("idLogradouro").toString());
+                        }else{
+                            Toast.makeText(getApplicationContext(), "CEP não encontrado, impossível prosseguir.", Toast.LENGTH_LONG).show();
+                        }
+
+
+                    /*if(responseAsString != null){
+                        Toast.makeText(getApplicationContext(), responseAsString, Toast.LENGTH_SHORT).show();
+                    }*/
+
+
+                }
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                } catch (ClientProtocolException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
 
         //final da mascara de CEP
 
@@ -158,6 +226,10 @@ public class CadastroActivity extends AppCompatActivity {
         System.out.print(e.getMessage());
     }
     }
+
+
+
+
 
 
 
