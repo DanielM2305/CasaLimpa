@@ -98,8 +98,8 @@ public class EditarPerfilPrincipalActivity extends AppCompatActivity {
             String picturePath = c.getString(columnindex);
             c.close();
             //A Imagem fica salva na varialvel do tipo Bitmap
-            Bitmap salvarImagemAddServico = (BitmapFactory.decodeFile(picturePath) );
-            imagemPerfilPrincipal.setImageBitmap(salvarImagemAddServico);
+            Bitmap salvarImagemPerfilPrincipal = (BitmapFactory.decodeFile(picturePath) );
+            imagemPerfilPrincipal.setImageBitmap(salvarImagemPerfilPrincipal);
             botaoAcessarGaleriaPerfilPrincipal.setText("Alterar foto");//Alterar Texto do botão
 
         }
