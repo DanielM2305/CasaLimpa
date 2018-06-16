@@ -13,29 +13,52 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+public class EditarPerfilPrincipalActivity extends AppCompatActivity {
 
-public class AdicionarNovoServicoActivity extends AppCompatActivity {
+    private EditText loginPerfilPrincipal;
+    private EditText emailPerfilPrincipal;
+    private EditText cpfPerfilPrincipal;
+    private EditText cepPerfilPrincipal;
 
-    private ImageView imagemAddNovoServico;
-    private Button botaoAcessarGaleria;
+    private ImageView imagemPerfilPrincipal;
+    private Button botaoAcessarGaleriaPerfilPrincipal;
     private final int GALERIA_IMAGENS = 1;
     private final int PERMISSION_REQUEST = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adicionar_novo_servico);
+        setContentView(R.layout.activity_editar_perfil_principal);
 
-        Spinner categoriaServico = (Spinner) findViewById(R.id.categoriaServicoSpinner);
-        final ArrayAdapter adapterCategoriaServico = ArrayAdapter.createFromResource(this, R.array.categoria_servico,
-                android.R.layout.simple_spinner_dropdown_item);
-        categoriaServico.setAdapter(adapterCategoriaServico);
+        //recuperando id
+
+        loginPerfilPrincipal = (EditText) findViewById(R.id.loginPerfilPrincipal);
+        emailPerfilPrincipal = (EditText) findViewById(R.id.loginPerfilPrincipal);
+        cpfPerfilPrincipal = (EditText) findViewById(R.id.cpfPerfilPrincipal);
+        cepPerfilPrincipal = (EditText) findViewById(R.id.cepEditTextId);
+
+
+        //Mascara de Cpf
+        SimpleMaskFormatter smfCpf = new SimpleMaskFormatter("NNN.NNN.NNN-NN");
+        MaskTextWatcher mtwCpf = new MaskTextWatcher(cpfPerfilPrincipal, smfCpf);
+        cpfPerfilPrincipal.addTextChangedListener(mtwCpf);
+
+        //Final da Mascara CPF
+
+        //Criandao mascara para o campo de CEP
+        SimpleMaskFormatter smfCep = new SimpleMaskFormatter("NN.NNN-NNN");
+        MaskTextWatcher mtwCep = new MaskTextWatcher(cepPerfilPrincipal, smfCep);
+        cepPerfilPrincipal.addTextChangedListener(mtwCep);
+
+        //final da mascara de CEP
+
 
         //Começa aqui acesso a imagem
 
@@ -51,13 +74,13 @@ public class AdicionarNovoServicoActivity extends AppCompatActivity {
             }
         }
 
-        imagemAddNovoServico = findViewById(R.id.imagemNovoServicoId);
-        botaoAcessarGaleria = findViewById(R.id.botaoAcessarGaleriaId);
-        botaoAcessarGaleria.setOnClickListener(new View.OnClickListener() {
+        imagemPerfilPrincipal = findViewById(R.id.imagemNovoServicoIdPerfilPrincipal);
+        botaoAcessarGaleriaPerfilPrincipal = findViewById(R.id.botaoAcessarGaleriaPerfilPrincipalId);
+        botaoAcessarGaleriaPerfilPrincipal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                Toast.makeText(AdicionarNovoServicoActivity.this, "Selecione uma imagem da galeria", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Selecione uma imagem da galeria", Toast.LENGTH_SHORT).show();
                 startActivityForResult(intent, GALERIA_IMAGENS);
 
             }
@@ -76,8 +99,8 @@ public class AdicionarNovoServicoActivity extends AppCompatActivity {
             c.close();
             //A Imagem fica salva na varialvel do tipo Bitmap
             Bitmap salvarImagemAddServico = (BitmapFactory.decodeFile(picturePath) );
-            imagemAddNovoServico.setImageBitmap(salvarImagemAddServico);
-            botaoAcessarGaleria.setText("Alterar foto");//Alterar Texto do botão
+            imagemPerfilPrincipal.setImageBitmap(salvarImagemAddServico);
+            botaoAcessarGaleriaPerfilPrincipal.setText("Alterar foto");//Alterar Texto do botão
 
         }
     }
@@ -98,23 +121,16 @@ public class AdicionarNovoServicoActivity extends AppCompatActivity {
 
 
 
-
-    public void uploadImagem (View view){
-        Toast.makeText(this, "Selecione uma foto", Toast.LENGTH_SHORT).show();
-
-    }
-
-
-
-    public void salvarServico(View view){
-
-        Intent intent = new Intent(getApplicationContext(), MeusServicosActivity.class);
-        startActivity(intent);
-    }
-    public void cancelarCadastroServico(View view){
-
-        Intent intent = new Intent(getApplicationContext(), MeusServicosActivity.class);
+    public void salvarEdicaoPerfilPrincipal(View view){
+        Toast.makeText(this, "Salvo", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), MeuPerfilActivity.class);
         startActivity(intent);
     }
 
+    public void cancelarEdicaoPerfilPrincipal(View view){
+        Toast.makeText(this, "Cancelar Edição", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), MeuPerfilActivity.class);
+        startActivity(intent);
+    }
 }
+

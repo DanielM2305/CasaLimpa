@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarPerfilEmpregadorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="10dp"
+        tools:ignore="MissingConstraints">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
+                <EditText
+                    android:id="@+id/nomePerfilEmpregador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome completo"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/corLetrasGeral" />
+
+                <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
+                <EditText
+                    android:id="@+id/telPerfilEmpregador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Telefone"
+                    android:inputType="phone"
+                    android:textColor="@color/corLetrasGeral" />
+
+                <EditText
+                    android:id="@+id/dataPerfilEmpregador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Data de nascimento"
+                    android:inputType="date"
+                    android:textColor="@color/corLetrasGeral" />
+
+
+                <!-- Botão apenas para teste de navegação entre paginas -->
+                <Button
+                    android:id="@+id/botaoCadastrarPerfilEmpregador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Salvar Edição"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:onClick="salvarEdicaoPerfilEmpregador"/>
+                <Button
+                    android:id="@+id/cancelarPerfilEmpregador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar"
+                    android:textColor="@color/corLetrasGeral"
+                    android:textSize="@dimen/tamanhoTextoBotoes"
+                    android:onClick="cancelarEdicaoPerfilEmpregador"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

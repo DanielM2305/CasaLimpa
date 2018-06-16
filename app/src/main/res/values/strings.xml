@@ -25,7 +25,9 @@
     <string name="cancelar">Cancelar</string>
     <string name="contratar_servico">Contratar Serviço</string>
     <string name="servicos_prestados">Serviços Prestados</string>
-    <string name="editar_perfil">Editar Perfil</string>
+    <string name="editar_perfil_principal">Editar Perfil Principal</string>
+    <string name="editar_perfil_prestador_servico">Editar Perfil Prestador de Serviço</string>
+    <string name="editar_perfil_empregador">Editar Perfil Empregador</string>
     <string name="sair">Sair</string>
 
     <string-array name="categoria_servico">

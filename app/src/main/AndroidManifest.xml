@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="casalimpa.projeto.com.casalimpa">
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.ACESS_NETWORK_STATE"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ico_casalimpa"
@@ -50,16 +53,27 @@
             android:name=".AvaliacoesActivity"
             android:label="@string/avaliacoes"
             android:screenOrientation="portrait" />
-        <activity android:name=".EditarPerfilActivity"
-            android:label="@string/editar_perfil"
+        <activity
+            android:name=".ContratarServicosActivity"
+            android:label="Contratar Serviços"
             android:screenOrientation="portrait" />
-        <activity android:name=".ContratarServicosActivity"
-                  android:label="Contratar Serviços"
-                  android:screenOrientation="portrait"></activity>
-        <activity android:name=".ServicosPrestadosActivity"
-                  android:label="Serviços Prestados"
-                  android:screenOrientation="portrait"></activity>
-
+        <activity
+            android:name=".ServicosPrestadosActivity"
+            android:label="Serviços Prestados"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditarPerfilPrincipalActivity"
+            android:label="@string/editar_perfil_principal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditarPerfilPrestadorServicoActivity"
+            android:label="@string/editar_perfil_prestador_servico"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".EditarPerfilEmpregadorActivity"
+            android:label="@string/editar_perfil_empregador"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
