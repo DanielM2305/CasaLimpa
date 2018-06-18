@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
@@ -36,6 +37,10 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+import casalimpa.projeto.com.casalimpa.entity.Endereco;
+import casalimpa.projeto.com.casalimpa.service.EnderecoService;
+import casalimpa.projeto.com.casalimpa.service.UsuarioService;
+
 public class CadastroActivity extends AppCompatActivity {
 
     private EditText telEditText;
@@ -47,6 +52,15 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText estadoEditText;
     private EditText cidadeEditText;
     private EditText bairroEditText;
+
+    private RadioButton tipoPerfilPrestador;
+    private RadioButton tipoPerfilEmpregador;
+    private EditText nomeCompleto;
+    private EditText email;
+    private EditText login;
+    private EditText senha;
+    private EditText telefone;
+    private EditText complementoEndereco;
 
     private Long idLogradouro;
 
@@ -72,7 +86,7 @@ public class CadastroActivity extends AppCompatActivity {
 
         */
 
-     //recuperando id
+        //recuperando id
         cpfEditText = (EditText) findViewById(R.id.cpfEditTextId);
         telEditText = (EditText) findViewById(R.id.telEditTextId);
         dataEditText = (EditText) findViewById(R.id.dataEditTextId);
@@ -81,6 +95,16 @@ public class CadastroActivity extends AppCompatActivity {
         estadoEditText = (EditText) findViewById(R.id.estadoEditTextId);
         cidadeEditText = (EditText) findViewById(R.id.cidadeEditTextId);
         bairroEditText = (EditText) findViewById(R.id.bairroEditTextId);
+
+        tipoPerfilPrestador = (RadioButton) findViewById(R.id.idTipoPerfilPrestador);
+        tipoPerfilEmpregador = (RadioButton) findViewById(R.id.idTipoPerfilEmpregador);
+        nomeCompleto = (EditText) findViewById(R.id.nomeCompleto);
+        email = (EditText) findViewById(R.id.email);
+        login = (EditText) findViewById(R.id.login);
+        senha = (EditText) findViewById(R.id.senha);
+
+        complementoEndereco = (EditText) findViewById(R.id.complementoEndereco);
+
 
         //Mascara de Cpf
         SimpleMaskFormatter smfCpf = new SimpleMaskFormatter("NNN.NNN.NNN-NN");
@@ -96,13 +120,12 @@ public class CadastroActivity extends AppCompatActivity {
         SimpleMaskFormatter smfTel = new SimpleMaskFormatter("(NN)NNNN-NNNNN");
         MaskTextWatcher mtwTel = new MaskTextWatcher(telEditText, smfTel);
         telEditText.addTextChangedListener(mtwTel);
-          //  }else{
+        //  }else{
 
     /*     SimpleMaskFormatter smfTel = new SimpleMaskFormatter("(NN)NNNN-NNNN");
         MaskTextWatcher mtwTel = new MaskTextWatcher(telEditText, smfTel);
         telEditText.addTextChangedListener(mtwTel);
    // }*/
-
 
 
         //final da mascara Telefone
@@ -122,54 +145,26 @@ public class CadastroActivity extends AppCompatActivity {
         cepEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             public void onFocusChange(View v, boolean hasFocus) {
 
-                try {
-                if(!hasFocus) {
+                if (!hasFocus) {
+                    EnderecoService enderecoService = new EnderecoService();
 
                     logradouroEditText.setText(null);
                     estadoEditText.setText(null);
                     cidadeEditText.setText(null);
                     bairroEditText.setText(null);
-
-                    HttpClient client = new DefaultHttpClient();
-                    HttpPost post = new HttpPost("http://192.168.43.113:80/casaLimpa/android/api_cep_request.php");
-
-                    List<NameValuePair> pairs = new ArrayList<NameValuePair>();
-                    pairs.add(new BasicNameValuePair("cep", cepEditText.getText().toString().replace(".","").replace("-","")));
-
-                    HttpResponse response = null;
-                    String responseAsString = null;
-
-                        post.setEntity(new UrlEncodedFormEntity(pairs));
-                        response = client.execute(post);
-                        responseAsString = EntityUtils.toString(response.getEntity());
-
-                        JSONObject json = new JSONObject(responseAsString);
-                        if(json.get("result").equals("true")){
-                            logradouroEditText.setText(json.get("logradouro").toString());
-                            estadoEditText.setText(json.get("uf").toString());
-                            cidadeEditText.setText(json.get("cidade").toString());
-                            bairroEditText.setText(json.get("bairro").toString());
-                            idLogradouro = new Long(json.get("idLogradouro").toString());
-                        }else{
-                            Toast.makeText(getApplicationContext(), "CEP não encontrado, impossível prosseguir.", Toast.LENGTH_LONG).show();
-                        }
-
-
-                    /*if(responseAsString != null){
-                        Toast.makeText(getApplicationContext(), responseAsString, Toast.LENGTH_SHORT).show();
-                    }*/
-
+                    Endereco endereco = enderecoService.pesquisarCep(cepEditText.getText().toString());
+                    if (endereco != null) {
+                        logradouroEditText.setText(endereco.getLogradouro());
+                        estadoEditText.setText(endereco.getEstado());
+                        cidadeEditText.setText(endereco.getCidade());
+                        bairroEditText.setText(endereco.getBairro());
+                        idLogradouro = endereco.getIdLogradouro();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "CEP não encontrado!", Toast.LENGTH_LONG).show();
+                    }
 
                 }
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                } catch (ClientProtocolException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+
             }
         });
 
@@ -183,55 +178,94 @@ public class CadastroActivity extends AppCompatActivity {
         }
 
 
-
     }
 
 
     public void cadastrarUsuario(View view) throws IOException {
 
-       try {
+        try {
+            Boolean valoresPreenchidos = false;
 
+            List<NameValuePair> parametros = new ArrayList<NameValuePair>();
+            if(this.login.getText() != null){
+                parametros.add(new BasicNameValuePair("login", this.login.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
 
-        Intent intent = new Intent(getApplicationContext(), PaginaInicioActivity.class);
-        startActivity(intent);
+            if(this.senha.getText() != null){
+                parametros.add(new BasicNameValuePair("senha", this.senha.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
 
+            if(this.email.getText() != null){
+                parametros.add(new BasicNameValuePair("email", this.email.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
 
-           HttpClient client = new DefaultHttpClient();
-           HttpPost post = new HttpPost("http://192.168.43.113:80/casaLimpa/android/api.php");
+            if(this.cpfEditText.getText() != null){
+                parametros.add(new BasicNameValuePair("docIdentificacao", this.cpfEditText.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
 
-           List<NameValuePair> pairs = new ArrayList<NameValuePair>();
-           pairs.add(new BasicNameValuePair("parametro1", "JAKU"));
-           pairs.add(new BasicNameValuePair("parametro2", "FABU"));
-           post.setEntity(new UrlEncodedFormEntity(pairs));
-           HttpResponse response = client.execute(post);
+            if(this.nomeCompleto.getText() != null){
+                parametros.add(new BasicNameValuePair("nome", this.nomeCompleto.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
 
-           String responseAsString = EntityUtils.toString(response.getEntity());
+            if(this.telEditText.getText() != null){
+                parametros.add(new BasicNameValuePair("telefone", this.telEditText.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
 
-           Toast.makeText(this, responseAsString, Toast.LENGTH_SHORT).show();
-/*
-        HttpPost httppost = new
-                HttpPost("http://192.168.43.113:80/casaLimpa/android/api.php");
-        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair("parametro1", "daniel111"));
-        nameValuePairs.add(new BasicNameValuePair("parametro2", "marcos222"));
-        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-        HttpResponse response = httpclient.execute(httppost);
-        HttpEntity entity = response.getEntity();
-        InputStream is = entity.getContent();
-        Log.i("postData", response.getStatusLine().toString());
-*/  }catch (ClientProtocolException cpe){
-          System.out.print(cpe.getMessage());
+            if(this.dataEditText.getText() != null){
+                parametros.add(new BasicNameValuePair("data_nascimento", this.dataEditText.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
 
-    }catch (IOException e){
-        System.out.print(e.getMessage());
+            if(this.idLogradouro != null){
+                parametros.add(new BasicNameValuePair("idLogradouro", this.idLogradouro.toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
+
+            if(this.complementoEndereco.getText() != null){
+                parametros.add(new BasicNameValuePair("complemento", this.complementoEndereco.getText().toString()));
+            }else{
+                valoresPreenchidos = true;
+            }
+
+            if(valoresPreenchidos.equals(false)){
+            if (this.tipoPerfilEmpregador.isChecked()) {
+                parametros.add(new BasicNameValuePair("tipoUsuario", "EMPREGRADO"));
+            } else if (this.tipoPerfilPrestador.isChecked()) {
+                parametros.add(new BasicNameValuePair("tipoUsuario", "EMPREGADOR"));
+            } else {
+                Toast.makeText(this, "É necessário escolher o tipo de usuário!", Toast.LENGTH_LONG).show();
+            }
+
+            UsuarioService usuarioService = new UsuarioService();
+            Boolean resultado = usuarioService.cadastrarUsuario(parametros);
+            if(resultado.equals(true)){
+                Toast.makeText(this, "Usuário cadastrado com sucesso!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), PaginaInicioActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "Ocorreu um erro! Tente novamente.", Toast.LENGTH_LONG).show();
+            }
+            }else{
+                Toast.makeText(this, "É necessário preencher todos os campos!", Toast.LENGTH_LONG).show();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    }
-
-
-
-
-
-
 
 
 }

@@ -32,7 +32,7 @@
 
         <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
         <EditText
-
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -42,6 +42,7 @@
 
         <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
         <EditText
+            android:id="@+id/senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"

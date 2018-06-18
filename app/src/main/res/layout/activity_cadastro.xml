@@ -25,6 +25,7 @@
                 android:orientation="vertical">
 
                 <TextView
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Escolha o perfil:"
@@ -34,18 +35,19 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os RadioButton devem conter um id que será usado na programação-->
                 <RadioGroup
+                    android:id="@+id/idTipoPerfil"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <RadioButton
-                        android:id="@+id/radioButton1"
+                        android:id="@+id/idTipoPerfilPrestador"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Prestador de Serviços" />
 
                     <RadioButton
-                        android:id="@+id/radioButton2"
+                        android:id="@+id/idTipoPerfilEmpregador"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -55,6 +57,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/nomeCompleto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nome completo"
@@ -63,6 +66,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="E-mail"
@@ -72,6 +76,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nome de usuário"
@@ -80,6 +85,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/senha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Senha"
@@ -88,6 +94,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+
                     android:id="@+id/cpfEditTextId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -170,6 +177,7 @@
 
                 <!--- android:id="@+id/NomedeId"  todos os EditText devem conter um id que será usado na programação-->
                 <EditText
+                    android:id="@+id/complementoEndereco"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Complemento"
@@ -186,6 +194,7 @@
                     android:text="Cadastrar"
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTextoBotoes"
+
                     android:onClick="cadastrarUsuario"/>
 
             </LinearLayout>

@@ -35,64 +35,68 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TableRow
+                    android:background="#347bb7">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:srcCompat="@drawable/calendar_icon_red" />
+
+                    <TextView
+                        android:id="@+id/CCLIAguardandoConfirmar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/corLetrasGeral"
+                        android:textSize="@dimen/tamanhoTextoBotoes" />
+                </TableRow>
+
+                    <TableRow
+                        android:background="#347bb7">
+                        <TextView
+                            android:id="@+id/CPROFAguardandoConfirmar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="rrrr"
+                            android:textColor="@color/corLetrasGeral"
+                            android:textSize="@dimen/tamanhoTextoBotoes" />
+                    </TableRow>
+                </TableLayout>
+
+
+
+
 
                 <TextView
-                    android:id="@+id/aguardandoServico"
+                    android:id="@+id/CCLIAguardandoRealizacao"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0"
+                    android:layout_height="match_parent"
                     android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
+                    android:textSize="@dimen/tamanhoTextoGeral" />
+
 
                 <TextView
+                    android:id="@+id/CPROFAguardandoRealizacao"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Serviço(s) aguardando realização dos prestadores de Serviço."
+                    android:layout_height="match_parent"
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTextoGeral" />
 
                 <TextView
-                    android:id="@+id/realizacaoServico"
+                    android:id="@+id/CPROFAguardandoAvaliacao"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Serviço(s) aguardando sua realização."
+                    android:layout_height="match_parent"
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTextoGeral" />
 
                 <TextView
-                    android:id="@+id/aguardandoAvaliacao"
+                    android:id="@+id/CCLIAguardandoAvaliacao"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Serviço(s) aguardando sua Avaliação."
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoGeral" />
-
-                <TextView
-                    android:id="@+id/suaAvaliacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoNumeroDashboard" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Serviço(s) onde você foi Avaliado."
+                    android:layout_height="match_parent"
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTextoGeral" />
 
@@ -102,7 +106,7 @@
                 <!-- Botão apenas para teste de navegação entre paginas -->
                 <Button
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Veja todos os Serviços"
                     android:textColor="@color/corLetrasGeral"
                     android:textSize="@dimen/tamanhoTextoBotoes" />
