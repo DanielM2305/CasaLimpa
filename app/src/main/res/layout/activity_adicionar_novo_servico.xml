@@ -36,6 +36,7 @@
             android:layout_height="wrap_content">
         </Spinner>
         <EditText
+            android:id="@+id/prazoAtendimento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Prazo para Atendimento"
@@ -45,6 +46,7 @@
 
 
         <EditText
+            android:id="@+id/precoSugerido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Preço sugerido"
@@ -54,6 +56,7 @@
 
 
         <EditText
+            android:id="@+id/observacoesImportantes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Observações Importantes"

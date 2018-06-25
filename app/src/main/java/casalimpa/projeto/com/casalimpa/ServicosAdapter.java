@@ -72,7 +72,10 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
                  precoSugerido.setText(elementos.get(position).getPrecoSugerido());
                  prestadorServico.setText(elementos.get(position).getPrestadorServico());
                  registroSalarial.setText(elementos.get(position).getRegistroSalarial());
-                 fotoServico.setImageResource(elementos.get(position).getFotoServico());
+                 if(elementos.get(position).getBitmapServico() != null){
+                     fotoServico.setImageBitmap(elementos.get(position).getBitmapServico());
+                 }
+
                  if(elementos.get(position).getStatusAtual() != null){
                      statusServico.setText(elementos.get(position).getStatusAtual());
                  }

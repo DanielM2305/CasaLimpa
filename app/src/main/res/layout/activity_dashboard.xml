@@ -11,123 +11,174 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:layout_gravity="top|center_horizontal">
+            android:layout_gravity="top|center_horizontal"
+            android:orientation="horizontal">
+
             <include
                 layout="@layout/activity_painel_de_controle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TableLayout
+                android:layout_height="wrap_content">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                <TableRow
-                    android:background="#347bb7">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        app:srcCompat="@drawable/calendar_icon_red" />
-
-                    <TextView
-                        android:id="@+id/CCLIAguardandoConfirmar"
+                    <TableLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/corLetrasGeral"
-                        android:textSize="@dimen/tamanhoTextoBotoes" />
-                </TableRow>
+                        android:layout_height="wrap_content">
 
-                    <TableRow
-                        android:background="#347bb7">
+
                         <TextView
-                            android:id="@+id/CPROFAguardandoConfirmar"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="rrrr"
+                            android:text="Notificações"
                             android:textColor="@color/corLetrasGeral"
                             android:textSize="@dimen/tamanhoTextoBotoes" />
-                    </TableRow>
-                </TableLayout>
 
 
+                        <TableRow android:background="#20a9a9a9">
+
+                            <ImageView
+                                android:id="@+id/imageViewCCLIAguardandoConfirmar"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/calendar_icon_red" />
+
+                            <TextView
+                                android:id="@+id/CCLIAguardandoConfirmar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/corLetrasGeral"
+                                android:textSize="@dimen/tamanhoTextoGeral"/>
+                        </TableRow>
+
+                        <TableRow android:background="#20a9a9a9">
+
+                            <ImageView
+                                android:id="@+id/imageViewCPROFAguardandoConfirmar"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/calendar_icon_red" />
+
+                            <TextView
+                                android:id="@+id/CPROFAguardandoConfirmar"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/corLetrasGeral"
+                                android:textSize="@dimen/tamanhoTextoGeral"/>
+                        </TableRow>
+
+                        <TableRow android:background="#20a9a9a9">
+
+                            <ImageView
+                                android:id="@+id/imageViewCCLIAguardandoRealizacao"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/calendar_icon_red" />
+
+                            <TextView
+                                android:id="@+id/CCLIAguardandoRealizacao"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/corLetrasGeral"
+                                android:textSize="@dimen/tamanhoTextoGeral" />
+                        </TableRow>
+
+                        <TableRow android:background="#20a9a9a9">
+
+                            <ImageView
+                                android:id="@+id/imageViewCPROFAguardandoRealizacao"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/calendar_icon_red" />
+
+                            <TextView
+                                android:id="@+id/CPROFAguardandoRealizacao"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/corLetrasGeral"
+                                android:textSize="@dimen/tamanhoTextoGeral" />
+                        </TableRow>
+
+                        <TableRow android:background="#20a9a9a9">
+
+                            <ImageView
+                                android:id="@+id/imageViewCPROFAguardandoAvaliacao"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/calendar_icon_red" />
+
+                            <TextView
+                                android:id="@+id/CPROFAguardandoAvaliacao"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/corLetrasGeral"
+                                android:textSize="@dimen/tamanhoTextoGeral" />
+                        </TableRow>
+
+                        <TableRow android:background="#20a9a9a9">
+
+                            <ImageView
+                                android:id="@+id/imageViewCCLIAguardandoAvaliacao"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                app:srcCompat="@drawable/calendar_icon_red" />
+
+                            <TextView
+                                android:id="@+id/CCLIAguardandoAvaliacao"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/corLetrasGeral"
+                                android:textSize="@dimen/tamanhoTextoGeral" />
+                        </TableRow>
+
+                    </TableLayout>
 
 
+                    <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
 
-                <TextView
-                    android:id="@+id/CCLIAguardandoRealizacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoGeral" />
-
-
-                <TextView
-                    android:id="@+id/CPROFAguardandoRealizacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoGeral" />
-
-                <TextView
-                    android:id="@+id/CPROFAguardandoAvaliacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoGeral" />
-
-                <TextView
-                    android:id="@+id/CCLIAguardandoAvaliacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoGeral" />
+                    <!-- Botão apenas para teste de navegação entre paginas -->
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Veja todos os Serviços"
+                        android:textColor="@color/corLetrasGeral"
+                        android:textSize="@dimen/tamanhoTextoBotoes" />
+                    <!--
+                    <Button
+                        android:onClick="telaDashboard"
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teste Proxima Página"
+                        android:textSize="@dimen/tamanhoTextoBotoes"
+                        android:textColor="@color/corLetrasGeral"/>
+    -->
 
 
-                <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
+                </LinearLayout>
 
-                <!-- Botão apenas para teste de navegação entre paginas -->
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Veja todos os Serviços"
-                    android:textColor="@color/corLetrasGeral"
-                    android:textSize="@dimen/tamanhoTextoBotoes" />
-                <!--
-                <Button
-                    android:onClick="telaDashboard"
-                    android:id="@+id/button"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Teste Proxima Página"
-                    android:textSize="@dimen/tamanhoTextoBotoes"
-                    android:textColor="@color/corLetrasGeral"/>
--->
+            </ScrollView>
 
 
-            </LinearLayout>
-
-        </ScrollView>
-
-
-    </LinearLayout>
+        </LinearLayout>
 
 
     </LinearLayout>

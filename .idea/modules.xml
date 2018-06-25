@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CasaLimpa.iml" filepath="$PROJECT_DIR$/CasaLimpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CasaLimpa2.iml" filepath="$PROJECT_DIR$/CasaLimpa2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpclient-4.4/httpclient-4.4.iml" filepath="$PROJECT_DIR$/httpclient-4.4/httpclient-4.4.iml" />
     </modules>

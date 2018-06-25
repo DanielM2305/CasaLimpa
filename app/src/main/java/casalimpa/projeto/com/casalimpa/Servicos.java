@@ -1,5 +1,7 @@
 package casalimpa.projeto.com.casalimpa;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by danie on 17/04/2018.
  */
@@ -14,14 +16,15 @@ public class Servicos {
 
 
 
-    private String categoria,
-            prazoMedioSugerido,
-            precoSugerido,
-            prestadorServico,
-            registroSalarial,
-            statusAtual;
+    private String categoria;
+    private String prazoMedioSugerido;
+    private String precoSugerido;
+    private String prestadorServico;
+    private String registroSalarial;
 
-    private int fotoServico;
+    private String statusAtual;
+    private int codServico, fotoServico;
+    private Bitmap bitmapServico;
 
     public Servicos(String categoria, String prazoMedioSugerido, String precoSugerido, String prestadorServico, String registroSalarial, int fotoServico) {
         this.categoria = categoria;
@@ -42,6 +45,18 @@ public class Servicos {
         this.fotoServico = fotoServico;
         this.statusAtual = statusAtual;
 
+    }
+
+    public Servicos(Integer codServico, String categoria, String prazoMedioSugerido, String precoSugerido, String prestadorServico, String registroSalarial, int fotoServico, String statusAtual, Bitmap bitmapServico) {
+        this.codServico = codServico;
+        this.categoria = categoria;
+        this.prazoMedioSugerido = prazoMedioSugerido;
+        this.precoSugerido = precoSugerido;
+        this.prestadorServico = prestadorServico;
+        this.registroSalarial = registroSalarial;
+        this.fotoServico = fotoServico;
+        this.statusAtual = statusAtual;
+        this.bitmapServico = bitmapServico;
     }
 
     public String getCategoria() {
@@ -98,6 +113,23 @@ public class Servicos {
 
     public void setStatusAtual(String statusAtual) {
         this.statusAtual = statusAtual;
+    }
+
+
+    public int getCodServico() {
+        return codServico;
+    }
+
+    public void setCodServico(int codServico) {
+        this.codServico = codServico;
+    }
+
+    public Bitmap getBitmapServico() {
+        return bitmapServico;
+    }
+
+    public void setBitmapServico(Bitmap bitmapServico) {
+        this.bitmapServico = bitmapServico;
     }
 }
 

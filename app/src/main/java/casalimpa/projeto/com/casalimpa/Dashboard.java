@@ -46,23 +46,23 @@ public class Dashboard extends MenusFuncionais {
             }
 
             if(jsonObject.get("CPROFAguardandoConfirmar") != null){
-                this.CCLIAguardandoConfirmar.setText(jsonObject.get("CPROFAguardandoConfirmar").toString()+ " Serviços aguardando sua confirmação como Prestador do Serviço.");
+                this.CPROFAguardandoConfirmar.setText(jsonObject.get("CPROFAguardandoConfirmar").toString()+ " Serviços aguardando sua confirmação como Prestador do Serviço.");
             }
 
             if(jsonObject.get("CCLIAguardandoRealizacao") != null){
-                this.CCLIAguardandoConfirmar.setText(jsonObject.get("CCLIAguardandoRealizacao").toString()+ " Serviços aguardando realização dos Prestadores de Serviços.");
+                this.CCLIAguardandoRealizacao.setText(jsonObject.get("CCLIAguardandoRealizacao").toString()+ " Serviços aguardando realização dos Prestadores de Serviços.");
             }
 
             if(jsonObject.get("CPROFAguardandoRealizacao") != null){
-                this.CCLIAguardandoConfirmar.setText(jsonObject.get("CPROFAguardandoRealizacao").toString()+ " Serviços aguardando sua realização.");
+                this.CPROFAguardandoRealizacao.setText(jsonObject.get("CPROFAguardandoRealizacao").toString()+ " Serviços aguardando sua realização.");
             }
 
             if(jsonObject.get("CPROFAguardandoAvaliacao") != null){
-                this.CCLIAguardandoConfirmar.setText(jsonObject.get("CPROFAguardandoAvaliacao").toString()+ " Serviços aguardando sua realização.");
+                this.CPROFAguardandoAvaliacao.setText(jsonObject.get("CPROFAguardandoAvaliacao").toString()+ " Serviços aguardando sua realização.");
             }
 
             if(jsonObject.get("CCLIAguardandoAvaliacao") != null){
-                this.CCLIAguardandoConfirmar.setText(jsonObject.get("CCLIAguardandoAvaliacao").toString()+ " Serviços aguardando sua Avaliação.");
+                this.CCLIAguardandoAvaliacao.setText(jsonObject.get("CCLIAguardandoAvaliacao").toString()+ " Serviços aguardando sua Avaliação.");
             }
 
         } catch (JSONException e) {
