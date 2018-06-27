@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="casalimpa.projeto.com.casalimpa.ContratarServicosFormActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="10dp"
+            tools:ignore="MissingConstraints">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categoria do serviço prestado"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Spinner>
+            <EditText
+                android:id="@+id/prazoAtendimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prazo para Atendimento"
+                android:inputType="time"
+                android:textColor="@color/corLetrasGeral" />
+
+
+
+            <EditText
+                android:id="@+id/precoSugerido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Preço sugerido"
+                android:inputType="numberDecimal"
+                android:textColor="@color/corLetrasGeral" />
+
+
+
+            <EditText
+                android:id="@+id/observacoesImportantes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Observações Importantes"
+                android:inputType="textLongMessage"
+                android:textColor="@color/corLetrasGeral" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Imagem Principal"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Importante: serviços com imagem tem maior aceitação dos usuários"
+                android:textStyle="bold"
+                android:textSize="@dimen/tamanhoTextoGeral"
+                />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

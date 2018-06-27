@@ -1,11 +1,14 @@
 package casalimpa.projeto.com.casalimpa;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -52,6 +55,9 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
         if(layoutInfo != null && layoutInfo.equals("SERVICOS_PRESTADOS")){
             rowView = inflater.inflate(R.layout.meus_servicos_prestados_res, parent, false);
 
+        }else if(layoutInfo != null && layoutInfo.equals("BUSCA_SERVICOS")){
+            rowView = inflater.inflate(R.layout.meus_servicos_res_busca, parent, false);
+
         }else{
             rowView = inflater.inflate(R.layout.meus_servicos_res, parent, false);
 
@@ -77,8 +83,23 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
                  }
 
                  if(elementos.get(position).getStatusAtual() != null){
-                     statusServico.setText(elementos.get(position).getStatusAtual());
+                    statusServico.setText(elementos.get(position).getStatusAtual());
                  }
+
+        ImageButton chkDone = (ImageButton) rowView.findViewById(R.id.imageButtonSelection);
+        chkDone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View parentRow = (View) v.getParent();
+                ListView listView = (ListView) parentRow.getParent();
+                final int position =   listView.getPositionForView(parentRow);
+                System.out.println("I am in position "+ position);
+                Integer idServico = elementos.get(position).getCodServico();
+                Intent intent = new Intent(v.getContext(), ContratarServicosFormActivity.class);
+                intent.putExtra("idServico",idServico);
+                context.startActivity(intent);
+            }
+        });
 
         return rowView;
     }

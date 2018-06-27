@@ -74,6 +74,10 @@
             android:name=".EditarPerfilEmpregadorActivity"
             android:label="@string/editar_perfil_empregador"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ContratarServicosFormActivity"
+            android:label="Contratar Serviços"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
