@@ -52,6 +52,26 @@ public class ServicoService {
         return null;
     }
 
+    public JSONObject getServicosRealizadosPorUsuario(String idUsuario) {
+
+        try {
+            ApiConnection apiConnection = new ApiConnection();
+            List<NameValuePair> parametros = new ArrayList<NameValuePair>();
+            parametros.add(new BasicNameValuePair("idUsuario", idUsuario));
+            parametros.add(new BasicNameValuePair("idOption", "GET_SERVICOS_USUARIO_REALIZADOS"));
+
+
+            JSONObject jsonObject = apiConnection.getConnection(parametros, apiConnection.getRequisicaoServico());
+            if (jsonObject.get("result") != null && jsonObject.get("result").equals("true")) {
+                return jsonObject;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public JSONObject getCategoriasServico(String idUsuario) {
 
         try {
@@ -92,6 +112,28 @@ public class ServicoService {
         }
         return null;
     }
+
+    public JSONObject getServicoPorId(String idUsuario, String idServico) {
+
+        try {
+            ApiConnection apiConnection = new ApiConnection();
+            List<NameValuePair> parametros = new ArrayList<NameValuePair>();
+            parametros.add(new BasicNameValuePair("idUsuario", idUsuario));
+            parametros.add(new BasicNameValuePair("codServico", idServico));
+
+
+            parametros.add(new BasicNameValuePair("idOption", "GET_SERVICO_POR_ID"));
+
+            JSONObject jsonObject = apiConnection.getConnection(parametros, apiConnection.getRequisicaoBuscarServicos());
+            if (jsonObject.get("result") != null && jsonObject.get("result").equals("true")) {
+                return jsonObject;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
     public JSONObject salvarServico(List<NameValuePair> parametros) {
 
         try {
@@ -108,4 +150,24 @@ public class ServicoService {
         }
         return null;
     }
+
+    public Boolean contratarServico(List<NameValuePair> parametros) {
+
+        try {
+            ApiConnection apiConnection = new ApiConnection();
+
+            JSONObject jsonObject = apiConnection.getConnection(parametros, apiConnection.getRequisicaoContratarServico());
+            if (jsonObject.get("result") != null && jsonObject.get("result").equals("true")) {
+                return true;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
+
+
 }

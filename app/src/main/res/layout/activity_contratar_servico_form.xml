@@ -24,63 +24,219 @@
             tools:ignore="MissingConstraints">
 
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Categoria do serviço prestado"
+                android:text="Contratar um serviço"
+                android:textStyle="bold"
                 android:textColor="@color/corLetrasGeral"
                 android:textSize="@dimen/tamanhoTextoGeral" />
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </Spinner>
-            <EditText
-                android:id="@+id/prazoAtendimento"
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Prazo para Atendimento"
+                android:text="Prazo médio"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:id="@+id/prazoMedio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preço sugerido"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categoria"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:id="@+id/categoriaServico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prestador do Serviço"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+            <TextView
+                android:id="@+id/nomePrestador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cidade Principal"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:id="@+id/cidadePrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Observações do prestador"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:id="@+id/observacaoPrestador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Para quando é o serviço?"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+
+            <EditText
+                android:id="@+id/dataInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:inputType="time"
                 android:textColor="@color/corLetrasGeral" />
 
-
-
-            <EditText
-                android:id="@+id/precoSugerido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Preço sugerido"
-                android:inputType="numberDecimal"
-                android:textColor="@color/corLetrasGeral" />
-
-
-
-            <EditText
-                android:id="@+id/observacoesImportantes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Observações Importantes"
-                android:inputType="textLongMessage"
-                android:textColor="@color/corLetrasGeral" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Imagem Principal"
+                android:text="Até quando você precisa do serviço?"
                 android:textStyle="bold"
                 android:textColor="@color/corLetrasGeral"
-                android:textSize="@dimen/tamanhoTextoGeral"
-                />
+                android:textSize="@dimen/tamanhoTextoGeral" />
+            <EditText
+                android:id="@+id/dataFim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textColor="@color/corLetrasGeral" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Importante: serviços com imagem tem maior aceitação dos usuários"
+                android:text="Qual o horário de início?"
                 android:textStyle="bold"
-                android:textSize="@dimen/tamanhoTextoGeral"
-                />
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+            <EditText
+                android:id="@+id/horario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textColor="@color/corLetrasGeral" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Qual o CEP para realização?"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+            <EditText
+                android:id="@+id/cep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textColor="@color/corLetrasGeral" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Endereço"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+            <EditText
+                android:id="@+id/enderecoCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:enabled="false"
+                android:textColor="@color/corLetrasGeral" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Complemento"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+            <EditText
+                android:id="@+id/complementoEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textColor="@color/corLetrasGeral" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Qual o turno do serviço?"
+                android:textStyle="bold"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoGeral" />
+            <Spinner
+                android:id="@+id/turnos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+            <Button
+                android:id="@+id/botaoCadastrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contratar"
+                android:textColor="@color/corLetrasGeral"
+                android:textSize="@dimen/tamanhoTextoBotoes"
+
+                android:onClick="contratarServico"/>
 
         </LinearLayout>
     </ScrollView>

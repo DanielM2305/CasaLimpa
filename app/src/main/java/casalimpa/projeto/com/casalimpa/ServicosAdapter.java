@@ -52,55 +52,57 @@ public class ServicosAdapter extends ArrayAdapter<Servicos> {
         View rowView = null;
 
 
-        if(layoutInfo != null && layoutInfo.equals("SERVICOS_PRESTADOS")){
+        if (layoutInfo != null && layoutInfo.equals("SERVICOS_PRESTADOS")) {
             rowView = inflater.inflate(R.layout.meus_servicos_prestados_res, parent, false);
 
-        }else if(layoutInfo != null && layoutInfo.equals("BUSCA_SERVICOS")){
+        } else if (layoutInfo != null && layoutInfo.equals("BUSCA_SERVICOS")) {
             rowView = inflater.inflate(R.layout.meus_servicos_res_busca, parent, false);
 
-        }else{
+        } else {
             rowView = inflater.inflate(R.layout.meus_servicos_res, parent, false);
 
         }
 
 
-        TextView  categoria          = (TextView) rowView.findViewById(R.id.categoriaId);
-        TextView  prazoMedioSugerido = (TextView) rowView.findViewById(R.id.prazoMedioSugeridoId);
-        TextView  precoSugerido      = (TextView) rowView.findViewById(R.id.precoSugeridoId);
-        TextView  prestadorServico   = (TextView) rowView.findViewById(R.id.prestadorServicoId);
-        TextView  registroSalarial   = (TextView) rowView.findViewById(R.id.registroSalarialId);
-        TextView  statusServico   = (TextView) rowView.findViewById(R.id.statusServicoId);
+        TextView categoria = (TextView) rowView.findViewById(R.id.categoriaId);
+        TextView prazoMedioSugerido = (TextView) rowView.findViewById(R.id.prazoMedioSugeridoId);
+        TextView precoSugerido = (TextView) rowView.findViewById(R.id.precoSugeridoId);
+        TextView prestadorServico = (TextView) rowView.findViewById(R.id.prestadorServicoId);
+        TextView registroSalarial = (TextView) rowView.findViewById(R.id.registroSalarialId);
+        TextView statusServico = (TextView) rowView.findViewById(R.id.statusServicoId);
 
-        ImageView fotoServico        = (ImageView) rowView.findViewById(R.id.fotoServicoId);
+        ImageView fotoServico = (ImageView) rowView.findViewById(R.id.fotoServicoId);
 
-                 categoria.setText(elementos.get(position).getCategoria());
-                 prazoMedioSugerido.setText(elementos.get(position).getPrazoMedioSugerido());
-                 precoSugerido.setText(elementos.get(position).getPrecoSugerido());
-                 prestadorServico.setText(elementos.get(position).getPrestadorServico());
-                 registroSalarial.setText(elementos.get(position).getRegistroSalarial());
-                 if(elementos.get(position).getBitmapServico() != null){
-                     fotoServico.setImageBitmap(elementos.get(position).getBitmapServico());
-                 }
+        categoria.setText(elementos.get(position).getCategoria());
+        prazoMedioSugerido.setText(elementos.get(position).getPrazoMedioSugerido());
+        precoSugerido.setText(elementos.get(position).getPrecoSugerido());
+        prestadorServico.setText(elementos.get(position).getPrestadorServico());
+        registroSalarial.setText(elementos.get(position).getRegistroSalarial());
+        if (elementos.get(position).getBitmapServico() != null) {
+            fotoServico.setImageBitmap(elementos.get(position).getBitmapServico());
+        }
 
-                 if(elementos.get(position).getStatusAtual() != null){
-                    statusServico.setText(elementos.get(position).getStatusAtual());
-                 }
+        if (elementos.get(position).getStatusAtual() != null) {
+            statusServico.setText(elementos.get(position).getStatusAtual());
+        }
 
         ImageButton chkDone = (ImageButton) rowView.findViewById(R.id.imageButtonSelection);
-        chkDone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                View parentRow = (View) v.getParent();
-                ListView listView = (ListView) parentRow.getParent();
-                final int position =   listView.getPositionForView(parentRow);
-                System.out.println("I am in position "+ position);
-                Integer idServico = elementos.get(position).getCodServico();
-                Intent intent = new Intent(v.getContext(), ContratarServicosFormActivity.class);
-                intent.putExtra("idServico",idServico);
-                context.startActivity(intent);
-            }
-        });
+        if (chkDone != null) {
 
+            chkDone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    View parentRow = (View) v.getParent();
+                    ListView listView = (ListView) parentRow.getParent();
+                    final int position = listView.getPositionForView(parentRow);
+                    System.out.println("I am in position " + position);
+                    Integer idServico = elementos.get(position).getCodServico();
+                    Intent intent = new Intent(v.getContext(), ContratarServicosFormActivity.class);
+                    intent.putExtra("idServico", idServico);
+                    context.startActivity(intent);
+                }
+            });
+        }
         return rowView;
     }
 
