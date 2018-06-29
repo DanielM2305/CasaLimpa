@@ -49,6 +49,8 @@ public class MeusServicosActivity extends MenusFuncionais {
             ServicoService servicoService = new ServicoService();
             JSONObject jsonObject = servicoService.getServicosUsuario(idUsuarioLogado);
 
+            if (jsonObject != null) {
+
 
             JSONArray jsonServicos = null;
             if (jsonObject.get("result").toString().equals("true")) {
@@ -86,6 +88,8 @@ public class MeusServicosActivity extends MenusFuncionais {
                      servicos.add(servico);
 
                 }
+            }} else{
+                Toast.makeText(this, "Não foi possível buscar serviços, verifique seu perfil de prestador", Toast.LENGTH_LONG);
             }
 
             ListView meus_servicos_res = (ListView) findViewById(R.id.ServicosListViewId);

@@ -43,7 +43,7 @@ public class ServicosPrestadosActivity extends MenusFuncionais {
             ServicoService servicoService = new ServicoService();
             JSONObject jsonObject = servicoService.getServicosRealizadosPorUsuario(idUsuarioLogado);
 
-
+            if(jsonObject != null){
             JSONArray jsonServicos = null;
             if (jsonObject.get("result").toString().equals("true")) {
                 jsonServicos = new JSONArray(jsonObject.get("servicos").toString());
@@ -103,7 +103,7 @@ public class ServicosPrestadosActivity extends MenusFuncionais {
                     servicos.add(servico);
 
                 }
-            }
+            }}
 
             ListView meus_servicos_res = (ListView) findViewById(R.id.idServicosPrestadosListView);
             ArrayAdapter adapter = new ServicosAdapter(this, servicos, "SERVICOS_PRESTADOS");
