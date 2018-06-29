@@ -48,12 +48,15 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Notificações"
+                            android:text="Notificações dos seus serviços"
                             android:textColor="@color/corLetrasGeral"
                             android:textSize="@dimen/tamanhoTextoBotoes" />
 
 
-                        <TableRow android:background="#20a9a9a9">
+                        <TableRow
+                            android:layout_height="197dp"
+                            android:background="#20a9a9a9"
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/imageViewCCLIAguardandoConfirmar"
@@ -66,10 +69,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:textColor="@color/corLetrasGeral"
-                                android:textSize="@dimen/tamanhoTextoGeral"/>
+                                android:textSize="@dimen/tamanhoTextoGeral" />
                         </TableRow>
 
-                        <TableRow android:background="#20a9a9a9">
+                        <TableRow
+                            android:background="#20a9a9a9"
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/imageViewCPROFAguardandoConfirmar"
@@ -81,8 +86,9 @@
                                 android:id="@+id/CPROFAguardandoConfirmar"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:singleLine="false"
                                 android:textColor="@color/corLetrasGeral"
-                                android:textSize="@dimen/tamanhoTextoGeral"/>
+                                android:textSize="@dimen/tamanhoTextoGeral" />
                         </TableRow>
 
                         <TableRow android:background="#20a9a9a9">
@@ -133,7 +139,9 @@
                                 android:textSize="@dimen/tamanhoTextoGeral" />
                         </TableRow>
 
-                        <TableRow android:background="#20a9a9a9">
+                        <TableRow
+                            android:layout_height="47dp"
+                            android:background="#20a9a9a9">
 
                             <ImageView
                                 android:id="@+id/imageViewCCLIAguardandoAvaliacao"
@@ -155,12 +163,7 @@
                     <!--- android:id="@+id/NomedeId"  todos os Button devem conter um id que será usado na programação-->
 
                     <!-- Botão apenas para teste de navegação entre paginas -->
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Veja todos os Serviços"
-                        android:textColor="@color/corLetrasGeral"
-                        android:textSize="@dimen/tamanhoTextoBotoes" />
+
                     <!--
                     <Button
                         android:onClick="telaDashboard"

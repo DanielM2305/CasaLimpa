@@ -167,7 +167,23 @@ public class ServicoService {
         return false;
     }
 
+    public JSONObject getAvaliacoesUsuario(String idUsuario) {
 
+        try {
+            ApiConnection apiConnection = new ApiConnection();
+            List<NameValuePair> parametros = new ArrayList<NameValuePair>();
+            parametros.add(new BasicNameValuePair("idUsuario", idUsuario));
+
+            JSONObject jsonObject = apiConnection.getConnection(parametros, apiConnection.getRequisicaoAvaliacoes());
+            if (jsonObject.get("resultProfissional") != null && jsonObject.get("resultProfissional").equals("true") || jsonObject.get("resultCliente") != null && jsonObject.get("resultCliente").equals("true")) {
+                return jsonObject;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 
 }

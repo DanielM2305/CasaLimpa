@@ -42,27 +42,27 @@ public class Dashboard extends MenusFuncionais {
 
         try {
             if(jsonObject.get("CCLIAguardandoConfirmar") != null){
-            this.CCLIAguardandoConfirmar.setText(jsonObject.get("CCLIAguardandoConfirmar").toString() + " Serviços aguardando a confirmação de Prestadores de Serviço.");
+            this.CCLIAguardandoConfirmar.setText(jsonObject.get("CCLIAguardandoConfirmar").toString() + " aguardando a confirmação do Prestador.");
             }
 
             if(jsonObject.get("CPROFAguardandoConfirmar") != null){
-                this.CPROFAguardandoConfirmar.setText(jsonObject.get("CPROFAguardandoConfirmar").toString()+ " Serviços aguardando sua confirmação como Prestador do Serviço.");
+                this.CPROFAguardandoConfirmar.setText(jsonObject.get("CPROFAguardandoConfirmar").toString()+ " aguardando sua confirmação de prestador.");
             }
 
             if(jsonObject.get("CCLIAguardandoRealizacao") != null){
-                this.CCLIAguardandoRealizacao.setText(jsonObject.get("CCLIAguardandoRealizacao").toString()+ " Serviços aguardando realização dos Prestadores de Serviços.");
+                this.CCLIAguardandoRealizacao.setText(jsonObject.get("CCLIAguardandoRealizacao").toString()+ " aguardando realização do prestador.");
             }
 
             if(jsonObject.get("CPROFAguardandoRealizacao") != null){
-                this.CPROFAguardandoRealizacao.setText(jsonObject.get("CPROFAguardandoRealizacao").toString()+ " Serviços aguardando sua realização.");
+                this.CPROFAguardandoRealizacao.setText(jsonObject.get("CPROFAguardandoRealizacao").toString()+ " aguardando sua realização de prestador.");
             }
 
             if(jsonObject.get("CPROFAguardandoAvaliacao") != null){
-                this.CPROFAguardandoAvaliacao.setText(jsonObject.get("CPROFAguardandoAvaliacao").toString()+ " Serviços aguardando sua realização.");
+                this.CPROFAguardandoAvaliacao.setText(jsonObject.get("CPROFAguardandoAvaliacao").toString()+ " aguardando sua avaliação de prestador.");
             }
 
             if(jsonObject.get("CCLIAguardandoAvaliacao") != null){
-                this.CCLIAguardandoAvaliacao.setText(jsonObject.get("CCLIAguardandoAvaliacao").toString()+ " Serviços aguardando sua Avaliação.");
+                this.CCLIAguardandoAvaliacao.setText(jsonObject.get("CCLIAguardandoAvaliacao").toString()+ " aguardando sua avaliação de cliente.");
             }
 
         } catch (JSONException e) {

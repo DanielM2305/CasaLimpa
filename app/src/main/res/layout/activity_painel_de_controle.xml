@@ -50,11 +50,6 @@
                 android:onClick="avaliacoesBotao"
                 android:background="@drawable/ico_avaliacoes" />
 
-            <ImageButton
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:onClick="meuperfilBotao"
-                android:background="@drawable/ico_meu_perfil" />
 
             <ImageButton
                 android:layout_width="50dp"

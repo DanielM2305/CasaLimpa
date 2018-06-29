@@ -44,11 +44,11 @@ public class MenusFuncionais extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void meuperfilBotao(View view){
+   /* public void meuperfilBotao(View view){
         Toast.makeText(this, "Meu Perfil", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(), MeuPerfilActivity.class);
         startActivity(intent);
-    }
+    }*/
 
     public void sairBotao(View view){
         Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();

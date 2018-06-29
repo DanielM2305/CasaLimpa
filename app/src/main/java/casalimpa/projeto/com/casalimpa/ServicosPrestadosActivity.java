@@ -51,11 +51,11 @@ public class ServicosPrestadosActivity extends MenusFuncionais {
 
                     Servicos servico = new Servicos(
                             Integer.parseInt(jsonServicos.getJSONObject(i).get("id_os").toString()),
+                            jsonServicos.getJSONObject(i).get("dataInicio").toString(),
+                            jsonServicos.getJSONObject(i).get("dataFim").toString(),
                             jsonServicos.getJSONObject(i).get("nomeProfissional").toString(),
-                            jsonServicos.getJSONObject(i).get("nomeProfissional").toString(),
-                            jsonServicos.getJSONObject(i).get("nomeProfissional").toString(),
-                            jsonServicos.getJSONObject(i).get("nomeProfissional").toString(),
-                            jsonServicos.getJSONObject(i).get("nomeProfissional").toString(),
+                            jsonServicos.getJSONObject(i).get("nomeServico").toString(),
+                            jsonServicos.getJSONObject(i).get("descricaoSituacaoOS").toString(),
                             0,
                             null,
                             null

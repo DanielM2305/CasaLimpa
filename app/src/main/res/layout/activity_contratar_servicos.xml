@@ -11,75 +11,69 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_gravity="top|center_horizontal">
         <include
             layout="@layout/activity_painel_de_controle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="355dp"
+            android:layout_weight="1" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="50dp">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Categoria do Serviço" />
 
-    <Spinner
-        android:id="@+id/idCategorias"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/idCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fitro - Cidades" />
-    <Spinner
-        android:id="@+id/idCidades"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/idCidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Filtro - Bairros" />
-    <Spinner
-        android:id="@+id/idBairros"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/idBuscarBotao"
-        android:text="Buscar"/>
+        <Spinner
+            android:id="@+id/idBairros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/idBuscarBotao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar" />
 
         <ListView
             android:id="@+id/ServicosListViewId"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:descendantFocusability="blocksDescendants"
-            />
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants" />
+
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
     </ScrollView>
-    </LinearLayout>
-    </LinearLayout>
+
 </android.support.v7.widget.LinearLayoutCompat>

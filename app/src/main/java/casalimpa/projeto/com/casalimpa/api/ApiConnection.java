@@ -50,6 +50,11 @@ public class ApiConnection {
         return "api_contratar_servico.action.php";
     }
 
+    public String getRequisicaoAvaliacoes() {
+        return "api_avaliacoes.action.php";
+    }
+
+
 
     public JSONObject getConnection(List<NameValuePair> parametros, String requisicao) {
         JSONObject jsonObject = null;
@@ -62,7 +67,7 @@ public class ApiConnection {
             }
 
             HttpClient client = new DefaultHttpClient();
-            HttpPost post = new HttpPost("http://192.168.43.113:80/casaLimpa/android/" + requisicao);
+            HttpPost post = new HttpPost("http://54.226.103.216:80/casaLimpa/android/" + requisicao);
 
             HttpResponse response = null;
             String responseAsString = null;
